@@ -1,499 +1,511 @@
-<!doctype html>
-<html lang="ta" class="scroll-smooth">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TOSSCONF 2026 | தமிழ் கட்டற்ற மென்பொருள் மாநாடு</title>
-        <meta name="description" content="TOSSCONF 2026 - தமிழ் கட்டற்ற மென்பொருள் மாநாடு. Join the largest gathering of Tamil Open Source developers, creators, and computing freedom enthusiasts at St. Joseph's Institute of Technology, Chennai." />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ் கட்டற்ற மென்பொருள் மாநாடு 2026</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+          crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="custom-bg">
 
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="TOSSCONF 2026 | தமிழ் கட்டற்ற மென்பொருள் மாநாடு" />
-        <meta property="og:description" content="Join the largest gathering of Tamil Open Source developers, creators, and computing freedom enthusiasts at St. Joseph's Institute of Technology, Chennai." />
-        <meta property="og:image" content="images/hero_bg1.png" />
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg navbar-bg navbar-dark p-3  fixed-top" id="mainNav" data-bs-theme="dark">
+      <div class="container align-items-center">
+        <a href="#" class="navbar-brand fs-5 text-light py-2 brand-logo" id="brand">
+          TossConf26
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navitems">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-lg-end" id="navitems">
+          <ul class="navbar-nav">
+            <li class="nav-item p-1"><a href="#hero"              class="nav-link nav-animated">முகப்பு</a></li>
+            <li class="nav-item p-1"><a href="#about"             class="nav-link nav-animated">நிகழ்வைப் பற்றி</a></li>
+            <li class="nav-item p-1"><a href="#program-schedule"  class="nav-link nav-animated">நிகழ்ச்சி நிரல்</a></li>
+            <li class="nav-item p-1"><a href="#pass"              class="nav-link nav-animated">அனுமதிச்சீட்டு</a></li>
+            <li class="nav-item p-1"><a href="#contact"           class="nav-link nav-animated">தொடர்பு</a></li>
+            <li class="nav-item p-1"><a href="#location"          class="nav-link nav-animated">இடம்</a></li>
+          </ul>
+        </div>
+      </div>
+  </nav>
 
-        <link rel="stylesheet" href="style.css" />
+  <main>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <nav class="navbar glass">
-            <div class="container nav-container">
-                <div class="nav-logo">
-                    <img
-                        src="images/hero_bg1.png"
-                        alt="TOSSCONF Logo"
-                        class="logo-img"
-                    />
-                    <span class="logo-text"
-                        >TOSSCONF <span class="logo-year">26</span></span
-                    >
-                </div>
-                <button class="menu-toggle" aria-label="Toggle Menu" id="menu-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <div class="nav-links nav-menu">
-                    <a href="#hackathon">Hackathon</a>
-                    <!--<a href="#schedule">Schedule</a>-->
-                    <a href="#contribute">Submit for Talk, Stalls, Workshops</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <!-- ===================== HERO ===================== -->
+    <div class="container-fluid hero p-5" id="hero">
+      <img src="./images/hero_bg1.png" class="logo-overlay" alt="Logo">
+      <div class="hero-content fade-up">
+        <h1 class="hero-title">
+          தமிழ் கட்டற்ற<br>மென்பொருள் மாநாடு 2026
+        </h1>
+        <p class="hero-sub">
+          தொழில்நுட்பம் அனைவருக்கும் — திறந்த மென்பொருள் வளர்ச்சிக்கான மேடை
+        </p>
+        <div class="event-details mt-3">
+          <p>
+            <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+            <strong>நாள்:</strong> ஜூலை 18, 19 — 2026
+          </p>
+          <p>
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <strong>இடம்:</strong> St. Joseph's Institute of Technology, OMR, Chennai
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="hero" id="about">
+      <div class="container  p-5">
+        <div class="text-center mb-5 fade-up">
+          <h1 class="about-title">நிகழ்வைப் பற்றி</h1>
+          <div class="title-underline mx-auto"></div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-md-5 text-center order-2 order-md-1 mb-4 mb-md-0 fade-up">
+            <img src="./images/bharathidasan.jpg" alt="விடுதலை மாநாடு" class="img-fluid about-img">
+          </div>
+          <div class="col-md-7 order-1 order-md-2 fade-up">
+            <p class="about-text">
+              விடுதலை - இதை விரும்பாதோர் யார்? விடுதலை விதையைக் கணினிக்குள் விதைக்கும் ஓர் ஒப்பற்ற திருவிழாவே இம்மாநாடு!
+              "எது செய்க நாட்டுக்கே எனத் துடித்த சிங்கமே! இன்றே, இன்னே புது நாளை உண்டாக்கித் தமிழ் காப்பாய்
+              புத்துணர்வைக் கொணர்வாய் இங்கே!" என்னும் பாவேந்தரின் வைர வரிகளை வாழ்வாக்கும் ஒரு நல் தொடக்கம்!
+              கட்டற்ற கணித்தமிழை விரும்பும் அத்துணை நல்லுள்ளங்களும் இதில் அடக்கம்!
+              வாருங்கள்! நிகழ்வைப் பாருங்கள்! பங்கு பெறுங்கள்!
+              சங்கம் வளர்த்த தமிழைக் கணினியிலும் வளர்த்தெடுப்போம்!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <!-- ===================== PARTICIPATING ORGS ===================== -->
+    <section class="container-fluid py-5 orgs-section">
+      <div class="row mb-4 justify-content-center fade-up">
+        <div class="col-12 text-center">
+          <h3 class="about-title">பங்குபெறும் அமைப்புகள்</h3>
+          <div class="title-underline mx-auto"></div>
+        </div>
+      </div>
+      <div class="row m-3 justify-content-center">
+        <div class="col-sm-12 col-md-4 mt-3 fade-up"><div class="card py-4 leftside-border h-100 w-100 shadow org-card"><div class="card-body text-center"><a class="text-decoration-none card-title" href="https://www.kaniyam.com/" target="_blank">கணியம் அறக்கட்டளை</a></div></div></div>
+        <div class="col-sm-12 col-md-4 mt-3 fade-up"><div class="card py-4 leftside-border h-100 w-100 shadow org-card"><div class="card-body text-center"><a class="text-decoration-none card-title" href="https://ilugc.in/" target="_blank">இந்திய லினக்ஸ் பயனர் குழு சென்னை</a></div></div></div>
+        <div class="col-sm-12 col-md-4 mt-3 fade-up"><div class="card py-4 leftside-border h-100 w-100 shadow org-card"><div class="card-body text-center"><a class="text-decoration-none card-title" href="https://kanchilug.wordpress.com/" target="_blank">காஞ்சி லினக்ஸ் பயனர் குழு</a></div></div></div>
+        <div class="col-sm-12 col-md-4 mt-3 fade-up"><div class="card py-4 leftside-border h-100 w-100 shadow org-card"><div class="card-body text-center"><a class="text-decoration-none card-title" href="https://fossunited.org/chennai" target="_blank">சென்னை ஒருங்கிணைந்த கட்டற்ற மென்பொருள் குழு</a></div></div></div>
+        <div class="col-sm-12 col-md-4 mt-3 fade-up"><div class="card py-4 leftside-border h-100 w-100 shadow org-card"><div class="card-body text-center"><a class="text-decoration-none card-title" href="https://payilagam.com/" target="_blank">பயிலகம்</a></div></div></div>
+        <div class="col-sm-12 col-md-4 mt-3 fade-up"><div class="card py-4 leftside-border h-100 w-100 shadow org-card"><div class="card-body text-center"><a class="text-decoration-none card-title" href="https://www.chennaipy.org/" target="_blank">சென்னை பைதான் பயனர் குழு</a></div></div></div>
+        <div class="col-sm-12 col-md-4 mt-3 fade-up"><div class="card py-4 leftside-border h-100 w-100 shadow org-card"><div class="card-body text-center"><a class="text-decoration-none card-title fs-6" href="https://sflc.in/" target="_blank">Software Freedom Law Center, India</a></div></div></div>
+      </div>
+    </section>
+    <hr>
+
+    <!-- ===================== PROGRAM SCHEDULE ===================== -->
+    <section class="container-fluid py-5" id="program-schedule">
+      <div class="container">
+
+        <!-- ✅ Section heading (was missing) -->
+        <div class="row mb-4 justify-content-center fade-up">
+          <div class="col-12 col-md-8 text-center">
+            <h3 class="about-title">நிகழ்ச்சி நிரல்</h3>
+            <div class="title-underline mx-auto mb-4"></div>
+          </div>
+        </div>
+
+        <!-- Tab buttons -->
+        <div class="row justify-content-center mb-4 fade-up">
+          <div class="col-12 text-center">
+            <nav class="nav nav-pills d-flex justify-content-center gap-2 flex-wrap">
+              <button type="button" class="nav-link active schedule-tab-btn rounded-pill px-4 py-2 fs-6"
+                      data-bs-toggle="tab" data-bs-target="#all">
+                July 18 (Workshops)
+              </button>
+              <button type="button" class="nav-link schedule-tab-btn rounded-pill px-4 py-2 fs-6"
+                      data-bs-toggle="tab" data-bs-target="#completed">
+                July 19 (Talks)
+              </button>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="scheduleTabContent">
+
+          <!-- DAY 1 -->
+          <div class="tab-pane fade show active" id="all">
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">8:30 AM – 9:30 AM</div>
+              <div class="schedule-body flex-grow-1 text-center fw-semibold text-muted">பதிவு (Registration)</div>
             </div>
-        </nav>
-
-        <section class="hero" style="margin: 30px 0 30px 0">
-            <div class="ambient-1"></div>
-            <div class="ambient-2"></div>
-            <div class="dot-pattern"></div>
-
-            <div class="container">
-                <div class="badge">சென்னை • ஜூலை 23, 24, 25 2026</div>
-
-                <h1 class="hero-title">
-                    <span class="tamil-font block"
-                        >தமிழ் கட்டற்ற மென்பொருள் மாநாடு</span
-                    >
-                    <span class="gradient-text">TossConf 2026</span>
-                </h1>
-
-                <p class="hero-desc">
-                    Join us at
-                    <strong>St. Joseph's Institute of Technology</strong>,
-                    Chennai.<br />
-                    Join the largest gathering of Tamil Open Source developers,
-                    creators, and localization enthusiasts. Building
-                    privacy-first tools, translation frameworks, and computing
-                    freedom for the next generation.
-                </p>
-
-                <div class="agenda-timeline">
-                    <div class="agenda-item">
-                        <span class="agenda-date">July 23</span>
-                        <span class="agenda-event">Hackathon</span>
-                    </div>
-                    <div class="agenda-item">
-                        <span class="agenda-date">July 24</span>
-                        <span class="agenda-event">Workshops</span>
-                    </div>
-                    <div class="agenda-item">
-                        <span class="agenda-date">July 25</span>
-                        <span class="agenda-event">Talks & Stalls</span>
-                    </div>
-                </div>
-
-                <div class="countdown">
-                    <div class="countdown-box glass">
-                        <div id="days" class="countdown-val">00</div>
-                        <div class="countdown-label">Days</div>
-                    </div>
-                    <div class="countdown-box glass">
-                        <div id="hours" class="countdown-val">00</div>
-                        <div class="countdown-label">Hours</div>
-                    </div>
-                    <div class="countdown-box glass">
-                        <div id="minutes" class="countdown-val">00</div>
-                        <div class="countdown-label">Mins</div>
-                    </div>
-                    <div class="countdown-box glass">
-                        <div id="seconds" class="countdown-val">00</div>
-                        <div class="countdown-label">Secs</div>
-                    </div>
-                </div>
-
-                <div class="btn-holder">
-                    <a href="#hackathon" class="btn-primary"
-                        >Explore Hackathon</a
-                    >
-                    <a href="#contribute" class="btn-secondary glass"
-                        >Contribute</a
-                    >
-                </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">10:00 AM – 10:30 AM</div>
+              <div class="schedule-body flex-grow-1">
+                <strong>[Keynote] Why Debian? Not Just Me, But You Too!</strong>
+                <p class="mb-1 small">Debian stands out for its unmatched commitment to freedom, stability, and community.</p>
+                <span class="text-speaker">Senthil Kumaran S</span>
+              </div>
             </div>
-        </section>
-
-        <section id="hackathon" class="section-padding bg-alt">
-            <div class="container">
-                <div class="section-header-flex">
-                    <div>
-                        <div class="section-tagline">
-                            // JULY 23 • TOSSHACK '26
-                        </div>
-                        <h2 class="section-title tamil-font">
-                            TossHack'26 - நிரலாக்கத் திருவிழா சவால்கள்
-                        </h2>
-                        <p class="section-desc">
-                            The main Hackathon kicks off on July 23rd. We have
-                            outlined 20 distinct problem statements. Build
-                            scalable solutions and submit your work.
-                        </p>
-                        <div style="margin-top: 20px;">
-                            <a href="instructions.html" class="btn-primary" style="text-decoration: none;">ஹேக்கத்தான் பதிவு வழிமுறைகள்</a>
-                        </div>
-                    </div>
-                    <a
-                        href="https://github.com/tossconf/TossHack26-ProblemStatements/issues"
-                        target="_blank"
-                        class="btn-github glass"
-                    >
-                        GITHUB REPOSITORY
-                        <svg
-                            viewBox="0 0 24 24"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </div>
-
-                <div id="github-issues" class="grid-3">
-                    <div class="shimmer-box shimmer-pulse"></div>
-                    <div class="shimmer-box shimmer-pulse"></div>
-                    <div class="shimmer-box shimmer-pulse"></div>
-                </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">10:30 AM – 10:45 AM</div>
+              <div class="schedule-body flex-grow-1 text-center fw-semibold text-muted">Tea Break</div>
             </div>
-        </section>
-
-        <!--<section id="schedule" class="section-padding">
-            <div class="container schedule-center">
-                <div class="text-center">
-                    <h2 class="section-title tamil-font">நிகழ்ச்சி நிரல்</h2>
-                    <p>Conference Agenda & Flow</p>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">10:45 AM – 1:00 PM</div>
+              <div class="d-flex gap-3 flex-grow-1 flex-wrap">
+                <div class="schedule-body flex-fill">
+                  <strong>Self Hosting</strong>
+                  <p class="mb-1 small">Networking basics, HTTP server, Media Server, RSS Reader, DNS Blocking.</p>
+                  <span class="text-speaker">Thanga Ayyanar, Mohamed Salman</span>
                 </div>
-
-                <div class="schedule-stack">
-                    <div class="schedule-card glass border-teal">
-                        <div class="schedule-column">
-                            <span class="schedule-time"
-                                >08:30 AM - 09:30 AM</span
-                            >
-                            <h4 class="schedule-card-title tamil-font">
-                                பதிவு மற்றும் வருகை ஏற்பு
-                            </h4>
-                            <p class="schedule-desc">
-                                Attendee Check-in & Badge Distribution
-                            </p>
-                        </div>
-                        <div class="schedule-venue">Registration Balcony</div>
-                    </div>
-
-                    <div class="schedule-card glass border-lime">
-                        <div class="schedule-column">
-                            <span class="schedule-time"
-                                >09:30 AM - 10:15 AM</span
-                            >
-                            <h4 class="schedule-card-title tamil-font">
-                                துவக்க உரை & முக்கிய அமர்வு
-                            </h4>
-                            <p class="schedule-desc">
-                                Keynote: Decentralization & The Localized
-                                Digital Ecosystem
-                            </p>
-                        </div>
-                        <div class="schedule-venue">Auditorium</div>
-                    </div>
-
-                    <div class="schedule-card glass border-purple">
-                        <div class="schedule-column">
-                            <span class="schedule-time"
-                                >10:15 AM - 01:00 PM</span
-                            >
-                            <h4 class="schedule-card-title tamil-font">
-                                செயல்முறைப் பயிற்சிப் பட்டறைகள்
-                            </h4>
-                            <p class="schedule-desc">
-                                Parallel Technical Tracks & Hands-On Workshops
-                            </p>
-                        </div>
-                        <div class="schedule-venue">Labs 1-4</div>
-                    </div>
+                <div class="schedule-body flex-fill">
+                  <strong>Nix Shells: Reproducibility & Declarative Control</strong>
+                  <p class="mb-1 small">Understand the power of Nix Shells for reliability and determinism.</p>
+                  <span class="text-speaker">Vivekanandan KS</span>
                 </div>
+              </div>
             </div>
-        </section>-->
-
-        <section id="contribute" class="section-padding bg-darker">
-            <div class="container contribute-center">
-                <div class="text-center">
-                    <h2 class="section-title tamil-font">
-                        சமூகப் பங்களிப்பு படிவங்கள்
-                    </h2>
-                    <p>Call for Proposals & Engagements</p>
-                    <div class="deadline-banner">
-                        <span class="deadline-icon">⚠️</span>
-                        <span>Submission Deadline: June 20, 2026</span>
-                    </div>
-                </div>
-
-                <div class="grid-3">
-                    <div
-                        class="contribute-card glass"
-                        style="--hover-border: var(--secondary-blue)"
-                    >
-                        <div class="contribute-card-top">
-                            <div class="coordinator-badge">JULY 25</div>
-                            <div class="card-icon">🎤</div>
-                            <h3 class="card-title tamil-font">
-                                பேச்சாளர் அழைப்பு | Call For Speakers
-                            </h3>
-                            <p class="card-desc">
-                                Join us on July 25 for technical talks and case
-                                studies regarding Linux, FOSS development, and
-                                language infrastructure.
-                            </p>
-                        </div>
-                        <a
-                            href="https://forums.tamillinuxcommunity.org/t/tossconf26-call-for-speakers/3316/3"
-                            target="_blank"
-                            class="btn-card btn-teal"
-                            >Submit Presentation Spec</a
-                        >
-                    </div>
-
-                    <div
-                        class="contribute-card glass"
-                        style="--hover-border: #9333ea"
-                    >
-                        <div class="contribute-card-top">
-                            <div class="coordinator-badge">JULY 24</div>
-                            <div class="card-icon">🛠️</div>
-                            <h3 class="card-title tamil-font">
-                                பயிற்சிப் பட்டறைகள் | Call for Workshops
-                            </h3>
-                            <p class="card-desc">
-                                Hands-on sessions on July 24. Guide users
-                                step-by-step through self-hosting, application
-                                development, or running systems.
-                            </p>
-                        </div>
-                        <a
-                            href="https://forums.tamillinuxcommunity.org/t/tossconf26-workshop/3315/2"
-                            target="_blank"
-                            class="btn-card btn-purple"
-                            >Submit Workshop Blueprint</a
-                        >
-                    </div>
-
-                    <div
-                        class="contribute-card glass"
-                        style="--hover-border: var(--primary-blue)"
-                    >
-                        <div class="contribute-card-top">
-                            <div class="coordinator-badge">JULY 25</div>
-                            <div class="card-icon">🎪</div>
-                            <h3 class="card-title tamil-font">
-                                அரங்குகள் அனுமதி | Call for FOSS Stalls
-                            </h3>
-                            <p class="card-desc">
-                                Showcase your project on July 25. Register
-                                physical booth space for your Linux User Group
-                                or developer project.
-                            </p>
-                        </div>
-                        <a
-                            href="https://forums.tamillinuxcommunity.org/t/call-for-foss-stalls-tossconf26/3314/2"
-                            target="_blank"
-                            class="btn-card btn-lime"
-                            >Request Exhibition Space</a
-                        >
-                    </div>
-
-
-                </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">1:00 PM – 1:45 PM</div>
+              <div class="schedule-body flex-grow-1 text-center fw-semibold text-muted">மதிய உணவு (Lunch)</div>
             </div>
-        </section>
-
-        <section id="venue" class="section-padding venue-section">
-            <div class="container">
-                <div class="venue-info">
-                    <div class="section-tagline">// THE VENUE</div>
-                    <h2 class="section-title tamil-font">இடம்</h2>
-                    <p class="venue-address">
-                        <strong>St. Joseph's Institute of Technology</strong
-                        ><br />
-                        Old Mahabalipuram Road, Semmancheri, <br />
-                        Chennai, Tamil Nadu 600119
-                    </p>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">1:45 PM – 4:00 PM</div>
+              <div class="d-flex gap-3 flex-grow-1 flex-wrap">
+                <div class="schedule-body flex-fill">
+                  <strong>Introduction to Assembly Programming – A Forgotten Art</strong>
+                  <p class="mb-1 small">அசெம்ப்ளி நிரலாக்கம் அறிமுகம் — ஒரு மறந்து போன கலை.</p>
+                  <span class="text-speaker">Mohan Raman</span>
                 </div>
-                <div class="map-container">
-                    <iframe
-                        src="https://maps.google.com/maps?q=St.%20Joseph's%20Institute%20of%20Technology,%20Chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    >
-                    </iframe>
-                    <br />
-                    <small>
-                        <a
-                            href="https://www.google.com/maps/search/?api=1&amp;query=St.+Joseph's+Institute+of+Technology,+Chennai"
-                            target="_blank"
-                            >View Larger Map</a
-                        >
-                    </small>
+                <div class="schedule-body flex-fill">
+                  <strong>How to Solve It with Clojure</strong>
+                  <p class="mb-1 small">Live coding session — build a real-world app from scratch using Clojure.</p>
+                  <span class="text-speaker">Tamizhvendan Sembiyan</span>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="contact" class="section-padding">
-            <div class="container contact-center">
-                <div class="text-center">
-                    <h2 class="section-title tamil-font">தொடர்புக்கு</h2>
-                    <p>Event Coordinator & Queries Contact</p>
-                </div>
-
-                <div class="contact-card glass">
-                    <div class="ambient-contact-glow"></div>
-                    <div>
-                        <div class="coordinator-badge">Event Coordinator</div>
-                        <h3 class="coordinator-name">Syed Jafer K</h3>
-                        <p class="coordinator-tamil tamil-font">சையது ஜாபர்</p>
-                        <p class="coordinator-desc">
-                            For general tracks, scheduling configurations,
-                            sponsorship proposals, or forum event operations,
-                            please reach out directly.
-                        </p>
-                    </div>
-                    <div class="contact-meta-holder">
-                        <a href="tel:+919176409201" class="contact-meta">
-                            <span>📞 +91 91764 09201</span>
-                        </a>
-                        <a
-                            href="mailto:contact.syedjafer@gmail.com"
-                            class="contact-meta"
-                        >
-                            <span>✉️ contact.syedjafer@gmail.com</span>
-                        </a>
-                    </div>
-                </div>
+          <!-- DAY 2 -->
+          <div class="tab-pane fade" id="completed">
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">8:30 AM – 9:30 AM</div>
+              <div class="schedule-body flex-grow-1 text-center fw-semibold text-muted">பதிவு (Registration)</div>
             </div>
-        </section>
-
-        <footer class="footer">
-            <div class="container">
-                <p class="footer-title tamil-font">
-                    கணியம் அறக்கட்டளை மற்றும் தமிழ் லினக்ஸ் சமூகம்
-                </p>
-                <p class="footer-copy">
-                    © 2026 TOSSCONF. Maintained openly on GitHub. Distributed
-                    under copyleft constraints.
-                </p>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">10:00 AM – 10:30 AM</div>
+              <div class="schedule-body flex-grow-1">
+                <strong>[Keynote] Between Ethics and Exploitation: The Infinity War</strong>
+                <p class="mb-1 small">Philosophical foundations of the Free Software Movement and why software freedom matters.</p>
+                <span class="text-speaker">Vijay Kumar</span>
+              </div>
             </div>
-        </footer>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">10:30 AM – 10:45 AM</div>
+              <div class="schedule-body flex-grow-1">
+                <strong>History of GNU/Linux in Brief</strong>
+                <p class="mb-1 small">From GNU/RMS to Linus Torvalds — the birth of Linux and open-source trends.</p>
+                <span class="text-speaker">Yagapriyan G</span>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">10:45 AM – 11:00 AM</div>
+              <div class="schedule-body flex-grow-1 text-center fw-semibold text-muted">Tea Break</div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">11:00 AM – 11:45 AM</div>
+              <div class="d-flex gap-3 flex-grow-1 flex-wrap">
+                <div class="schedule-body flex-fill">
+                  <strong>Dissecting Ente: A Deep Dive into Architecture</strong>
+                  <p class="mb-1 small">Zero-knowledge architecture with live demos — privacy-first platforms.</p>
+                  <span class="text-speaker">Keerthana Rajesh Kumar</span>
+                </div>
+                <div class="schedule-body flex-fill">
+                  <strong>Demystifying Artificial Intelligence</strong>
+                  <p class="mb-1 small">Beginner-friendly intro to AI and open source tools for Tamil contributors.</p>
+                  <span class="text-speaker">Dr. U. Sabura Banu</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">11:45 AM – 12:30 PM</div>
+              <div class="d-flex gap-3 flex-grow-1 flex-wrap">
+                <div class="schedule-body flex-fill">
+                  <strong>Your First Steps into Open Source Data Engineering</strong>
+                  <p class="mb-1 small">Hadoop, Sqoop, Apache Kafka, Airflow, and DBT for beginners.</p>
+                  <span class="text-speaker">Abinaya SV</span>
+                </div>
+                <div class="schedule-body flex-fill">
+                  <strong>Dissect & Build Network Packets</strong>
+                  <p class="mb-1 small">Build, capture, and analyse packets using Python's Scapy library.</p>
+                  <span class="text-speaker">Rengaraj</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">12:30 PM – 1:00 PM</div>
+              <div class="schedule-body flex-grow-1 text-center fw-semibold text-muted">Networking with Stalls</div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">1:00 PM – 2:00 PM</div>
+              <div class="schedule-body flex-grow-1 text-center fw-semibold text-muted">மதிய உணவு — Veg / Non-Veg</div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">2:00 PM – 2:45 PM</div>
+              <div class="d-flex gap-3 flex-grow-1 flex-wrap">
+                <div class="schedule-body flex-fill">
+                  <strong>Make Your Idea from 0 to 1 with Open Source</strong>
+                  <p class="mb-1 small">Real-life "kutti" story: from ideation to execution.</p>
+                  <span class="text-speaker">Dhanush Kandhan</span>
+                </div>
+                <div class="schedule-body flex-fill">
+                  <strong>A Day in the Open Source World</strong>
+                  <p class="mb-1 small">Journey through fuzzy search in JS to phonetic Tamil search via dictpress.</p>
+                  <span class="text-speaker">Bowrna Prabhakaran</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">2:45 PM – 3:30 PM</div>
+              <div class="d-flex gap-3 flex-grow-1 flex-wrap">
+                <div class="schedule-body flex-fill">
+                  <strong>Get Parallel'ized, Not Paralyzed: Intro to HPC</strong>
+                  <p class="mb-1 small">OpenMP, MPI, and PyOMP — parallel programming for Python speed.</p>
+                  <span class="text-speaker">Palaniappan Nallalagappan</span>
+                </div>
+                <div class="schedule-body flex-fill">
+                  <strong>Speed It Up! Efficient Indexes in MongoDB</strong>
+                  <p class="mb-1 small">Index types, query performance impact, and best practices.</p>
+                  <span class="text-speaker">Naveen Kumar</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">3:30 PM – 4:15 PM</div>
+              <div class="d-flex gap-3 flex-grow-1 flex-wrap">
+                <div class="schedule-body flex-fill">
+                  <strong>From Bare Metal to Containers</strong>
+                  <p class="mb-1 small">How Docker changed app hosting — from bare metal to containers.</p>
+                  <span class="text-speaker">Udhayaprakasha</span>
+                </div>
+                <div class="schedule-body flex-fill">
+                  <strong>Building Web with Batteries Included</strong>
+                  <p class="mb-1 small">Full-stack apps with Frappe — doctypes, Jinja, Vue, and walkthroughs.</p>
+                  <span class="text-speaker">Hari</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-3 mb-3 flex-wrap flex-md-nowrap schedule-row fade-up">
+              <div class="schedule-time-col">4:15 PM – 4:45 PM</div>
+              <div class="schedule-body flex-grow-1">
+                <strong>What Does 'Open' Really Mean in Open Source AI?</strong>
+                <p class="mb-1 small">Does "open" mean code, models, and data — or just the label?</p>
+                <span class="text-speaker">Achanandhi M</span>
+              </div>
+            </div>
+          </div>
 
-        <script>
-            // Precision Dynamic Countdown Timer
-            const targetTimeline = new Date("July 23, 2026 09:00:00").getTime();
+        </div>
+      </div>
+    </section>
+    <hr>
 
-            function runCountdownEngine() {
-                const currentPeriod = new Date().getTime();
-                const chronologicalGap = targetTimeline - currentPeriod;
+    <!-- ===================== REGISTRATION ===================== -->
+    <section class="container-fluid py-5" id="pass" style="background:#fff">
+      <div class="container text-center">
+        <h3 class="about-title fade-up">அனுமதிச்சீட்டு</h3>
+        <div class="title-underline mx-auto mb-5 fade-up"></div>
+        <div class="row justify-content-center g-4">
+          <div class="col-sm-12 col-md-4 fade-up">
+            <div class="card leftside-border shadow h-100 p-4 reg-card">
+              <h5 class="fw-semibold">🧑 பொதுமக்கள்</h5>
+              <p class="display-6 fw-bold" style="color:var(--clr-primary)">₹200</p>
+              <p class="text-muted small">நுழைவு, கலந்துகொள்ளல் மற்றும் கான்ஃபரன்ஸ் கிட்</p>
+              <span class="badge bg-danger rounded-pill px-3 py-2">Registration Closed</span>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 fade-up">
+            <div class="card leftside-border shadow h-100 p-4 reg-card">
+              <h5 class="fw-semibold">🎓 SJIT மாணவர்கள்</h5>
+              <p class="display-6 fw-bold" style="color:var(--clr-primary)">₹100</p>
+              <p class="text-muted small">செயின்ட் ஜோசப் மாணவர்களுக்கு மட்டும்</p>
+              <span class="badge bg-danger rounded-pill px-3 py-2">Registration Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
 
-                if (chronologicalGap <= 0) {
-                    document.getElementById("days").innerText = "00";
-                    document.getElementById("hours").innerText = "00";
-                    document.getElementById("minutes").innerText = "00";
-                    document.getElementById("seconds").innerText = "00";
-                    return;
-                }
+    <!-- ===================== VOLUNTEERS ===================== -->
+    <section class="container-fluid py-5" id="volunteers-section">
+      <div class="container text-center">
+        <h3 class="about-title fade-up">தன்னார்வலர்கள்</h3>
+        <div class="title-underline mx-auto mb-4 fade-up"></div>
+        <p class="text-muted mb-5 fade-up">நிகழ்வுகளின் வெற்றிக்கு பின்னால் நிற்கும் அர்ப்பணிக்கப்பட்டவர்களை சந்தியுங்கள்.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-4">
 
-                const daysLeft = Math.floor(
-                    chronologicalGap / (1000 * 60 * 60 * 24),
-                );
-                const hoursLeft = Math.floor(
-                    (chronologicalGap % (1000 * 60 * 60 * 24)) /
-                        (1000 * 60 * 60),
-                );
-                const minutesLeft = Math.floor(
-                    (chronologicalGap % (1000 * 60 * 60)) / (1000 * 60),
-                );
-                const secondsLeft = Math.floor(
-                    (chronologicalGap % (1000 * 60)) / 1000,
-                );
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://goinggnu.wordpress.com" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/shrini.jpeg" class="rounded-circle vol-avatar mb-2" alt="Shrinivasan T">
+              <div class="small fw-semibold vol-name">Shrinivasan T<br><small class="text-muted">சீனிவாசன்</small></div>
+            </a>
+          </div>
 
-                document.getElementById("days").innerText = String(
-                    daysLeft,
-                ).padStart(2, "0");
-                document.getElementById("hours").innerText = String(
-                    hoursLeft,
-                ).padStart(2, "0");
-                document.getElementById("minutes").innerText = String(
-                    minutesLeft,
-                ).padStart(2, "0");
-                document.getElementById("seconds").innerText = String(
-                    secondsLeft,
-                ).padStart(2, "0");
-            }
-            setInterval(runCountdownEngine, 1000);
-            runCountdownEngine();
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://mohan43u.space/" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/mohan.jpg" class="rounded-circle vol-avatar mb-2" alt="Mohan Raman">
+              <div class="small fw-semibold vol-name">Mohan Raman<br><small class="text-muted">மோகன் ராமன்</small></div>
+            </a>
+          </div>
 
-            // REST API Asynchronous Repository Pipeline
-            async function fetchActiveIssues() {
-                const layoutTarget = document.getElementById("github-issues");
-                try {
-                    const apiURI =
-                        "https://api.github.com/repos/tossconf/TossHack26-ProblemStatements/issues?state=open&per_page=18";
-                    const resolutionPipeline = await fetch(apiURI);
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://parottasalna.com" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/syedjafer.jpg" class="rounded-circle vol-avatar mb-2" style="object-position:top" alt="Syed Jafer K">
+              <div class="small fw-semibold vol-name">Syed Jafer K<br><small class="text-muted">சையது ஜாபர்</small></div>
+            </a>
+          </div>
 
-                    if (!resolutionPipeline.ok)
-                        throw new Error("Data payload streaming failure");
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://linkedin.com/in/thangaayyanar" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/thanga_ayyanar.jpeg" class="rounded-circle vol-avatar mb-2" alt="Thanga Ayyanar">
+              <div class="small fw-semibold vol-name">Thanga Ayyanar<br><small class="text-muted">தங்க அய்யனார்</small></div>
+            </a>
+          </div>
 
-                    const datasetArray = await resolutionPipeline.json();
-                    layoutTarget.innerHTML = "";
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://www.linkedin.com/in/mohamed-salman-ar/" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/salman.jpg" class="rounded-circle vol-avatar mb-2" alt="Mohamed Salman">
+              <div class="small fw-semibold vol-name">Mohamed Salman<br><small class="text-muted">சல்மான்</small></div>
+            </a>
+          </div>
 
-                    if (datasetArray.length === 0) {
-                        layoutTarget.innerHTML = `<p style="color:#555; grid-column: 1/-1; text-align:center; font-family:monospace; font-size:14px; padding:24px 0;">No active problem issues found inside the workspace repository tracking system currently.</p>`;
-                        return;
-                    }
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://www.linkedin.com/in/gokila-harini-s-4bba4630b" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/gokila.png" class="rounded-circle vol-avatar mb-2" alt="Gokila Harini S">
+              <div class="small fw-semibold vol-name">Gokila Harini S<br><small class="text-muted">கோகிலா ஹரிணி</small></div>
+            </a>
+          </div>
 
-                    datasetArray.forEach((issueData) => {
-                        const blockNode = document.createElement("div");
-                        blockNode.className = "issue-card";
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://www.linkedin.com/in/allair-joshua-89a9b2265/" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/joshua.png" class="rounded-circle vol-avatar mb-2" alt="Allair Joshua">
+              <div class="small fw-semibold vol-name">Allair Joshua<br><small class="text-muted">ஜோசுவா</small></div>
+            </a>
+          </div>
 
-                        const processedTitle = issueData.title
-                            .replace(/</g, "&lt;")
-                            .replace(/>/g, "&gt;");
-                        const processedBody = issueData.body
-                            ? issueData.body
-                                  .replace(/</g, "&lt;")
-                                  .replace(/>/g, "&gt;")
-                                  .substring(0, 110) + "..."
-                            : "No architectural parameters structured inside this problem module description...";
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://www.linkedin.com/in/hariharanu/" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/hari.jpg" class="rounded-circle vol-avatar mb-2" alt="Hariharan Umapathi">
+              <div class="small fw-semibold vol-name">Hariharan U<br><small class="text-muted">ஹரிஹரன்</small></div>
+            </a>
+          </div>
 
-                        blockNode.innerHTML = `
-                        <div>
-                            <div class="issue-meta">
-                                <span class="issue-num">#ISSUE-${issueData.number}</span>
-                                <span class="issue-status"><span class="issue-pulse-dot"></span>OPEN SPEC</span>
-                            </div>
-                            <h4 class="issue-card-title font-sans">${processedTitle}</h4>
-                            <p class="issue-context">${processedBody}</p>
-                        </div>
-                        <div>
-                            <a href="${issueData.html_url}" target="_blank" class="issue-link">Inspect Parameters</a>
-                        </div>
-                    `;
-                        layoutTarget.appendChild(blockNode);
-                    });
-                } catch (networkFault) {
-                    console.error(networkFault);
-                    layoutTarget.innerHTML = `
-                    <div style="grid-column: 1/-1; text-align:center; padding:48px 24px; border:1px solid rgba(239,68,68,0.2); background:rgba(239,68,68,0.02); border-radius:16px;">
-                        <p style="color:#ef4444; font-family:monospace; font-size:14px; margin-bottom:8px;">Data synchronization with GitHub API failed or was rate-limited.</p>
-                        <a href="https://github.com/tossconf/TossHack26-ProblemStatements/issues" target="_blank" style="font-size:12px; color:var(--primary-blue); text-decoration:underline; font-weight:bold;">Browse Problems Directly on GitHub</a>
-                    </div>`;
-                }
-            }
-            fetchActiveIssues();
-        </script>
-        <script src="script.js"></script>
-    </body>
+          <div class="text-center vol-item fade-up" style="width:120px">
+            <a href="https://github.com/kalaiarasan23" target="_blank" class="text-decoration-none">
+              <img src="./images/volunteers/kalai.jpg" class="rounded-circle vol-avatar mb-2" alt="Kalaiarasan">
+              <div class="small fw-semibold vol-name">Kalaiarasan<br><small class="text-muted">கலையரசன்</small></div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="container-fluid py-5" id="contact" style="background:#fff">
+      <div class="container text-center">
+        <h3 class="about-title fade-up">நிகழ்வு ஒருங்கிணைப்பாளர்கள்</h3>
+        <div class="title-underline mx-auto mb-5 fade-up"></div>
+        <div class="row justify-content-center g-4">
+          <div class="col-sm-12 col-md-4 fade-up">
+            <div class="card leftside-border shadow p-4 text-center contact-card">
+              <img src="./images/volunteers/syedjafer.jpg" class="rounded-circle mx-auto mb-3 contact-avatar" style="object-position:top" alt="Syed Jafer K">
+              <h5 class="fw-semibold mb-0">Syed Jafer K</h5>
+              <p class="text-muted small mb-2">சையது ஜாபர்</p>
+              <p class="small mb-1">📞 9176409201</p>
+              <a href="mailto:contact.syedjafer@gmail.com" class="small contact-link">contact.syedjafer@gmail.com</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 fade-up">
+            <div class="card leftside-border shadow p-4 text-center contact-card">
+              <img src="./images/volunteers/thanga_ayyanar.jpeg" class="rounded-circle mx-auto mb-3 contact-avatar" alt="Thanga Ayyanar">
+              <h5 class="fw-semibold mb-0">Thanga Ayyanar</h5>
+              <p class="text-muted small mb-2">தங்க அய்யனார்</p>
+              <p class="small mb-1">📞 9597729724</p>
+              <a href="mailto:gldayan8@gmail.com" class="small contact-link">gldayan8@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <!-- ===================== LOCATION ===================== -->
+    <section class="container-fluid py-5" id="location">
+      <div class="container text-center">
+        <h3 class="about-title fade-up">இடம்</h3>
+        <div class="title-underline mx-auto mb-4 fade-up"></div>
+        <p class="fw-semibold fs-5 fade-up" style="color:#1e4f9c">செயிண்ட் ஜோசப் தொழில்நுட்ப நிறுவனம்</p>
+        <p class="text-muted mb-4 fade-up">Old Mahabalipuram Road, Semmancheri, Chennai – 600119</p>
+        <div class="map-frame fade-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d156811.08436032807!2d80.1488643!3d12.9777684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525bbb618d3ea9%3A0x90b3767be093efaa!2sSt.Joseph%27s%20Institute%20of%20Technology!5e1!3m2!1sen!2sin!4v1743856603218!5m2!1sen!2sin"
+            width="100%" height="420" style="border:0;display:block" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p class="mb-2">♡ நன்றி ♡</p>
+    <p class="mb-2">இணைய பக்கத்தின் மூல நிரல்
+      <a href="https://github.com/tossconf2025/tossconf2025.github.io" target="_blank">இங்கே</a>
+      பகிரப்பட்டுள்ளன.
+    </p>
+    <p class="small footer-copy">© 2026 தமிழ் கட்டற்ற மென்பொருள் மாநாடு. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* ── Scroll-reveal (IntersectionObserver) ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    /* ── Navbar: shrink on scroll ── */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 60);
+    });
+
+    /* ── Smooth scroll for all anchor links ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
