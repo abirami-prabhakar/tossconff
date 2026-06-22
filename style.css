@@ -138,6 +138,37 @@ body {
     color: var(--primary-blue);
 }
 
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+.menu-toggle .bar {
+    height: 2px;
+    width: 100%;
+    background-color: var(--dark-text);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+/* Animate mobile menu icon to X */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Hero Interactive Canvas */
 .hero {
     position: relative;
@@ -765,6 +796,24 @@ body {
     transform: scale(1.01);
 }
 
+.btn-instruct {
+    background-color: var(--secondary-blue);
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.btn-instruct:hover {
+    opacity: 0.98;
+    transform: scale(1.02);
+}
+
+.registration-contact {
+    margin-top: 24px;
+    color: var(--dark-text);
+    font-size: 14px;
+}
+
 /* Unified Contact Engine */
 .contact-center .text-center {
     text-align: center;
@@ -940,3 +989,32 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* Responsive Mobile Navigation Drawer */
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        width: 100%;
+        height: calc(100vh - 80px);
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        padding: 40px 24px;
+        gap: 24px;
+        border-top: 1px solid var(--border-color);
+        z-index: 49;
+    }
+    .nav-links.active {
+        left: 0;
+    }
+}
+

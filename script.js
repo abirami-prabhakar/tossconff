@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
 
     // Close nav on link click
     document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
         navMenu.classList.remove('active');
       });
     });
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Close nav if clicking outside the menu
     document.addEventListener('click', (e) => {
       if (!e.target.closest('.nav-container')) {
+        menuToggle.classList.remove('active');
         navMenu.classList.remove('active');
       }
     });
