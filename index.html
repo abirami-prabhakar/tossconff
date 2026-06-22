@@ -3,7 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>TOSSConf 26 | தமிழ் கட்டற்ற மென்பொருள் மாநாடு</title>
+        <title>TOSSCONF 2026 | தமிழ் கட்டற்ற மென்பொருள் மாநாடு</title>
+        <meta name="description" content="TOSSCONF 2026 - தமிழ் கட்டற்ற மென்பொருள் மாநாடு. Join the largest gathering of Tamil Open Source developers, creators, and computing freedom enthusiasts at St. Joseph's Institute of Technology, Chennai." />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="TOSSCONF 2026 | தமிழ் கட்டற்ற மென்பொருள் மாநாடு" />
+        <meta property="og:description" content="Join the largest gathering of Tamil Open Source developers, creators, and computing freedom enthusiasts at St. Joseph's Institute of Technology, Chennai." />
+        <meta property="og:image" content="images/hero_bg1.png" />
 
         <link rel="stylesheet" href="style.css" />
 
@@ -25,7 +33,12 @@
                         >TOSSConf <span class="logo-year">26</span></span
                     >
                 </div>
-                <div class="nav-links">
+                <button class="menu-toggle" aria-label="Toggle Menu" id="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="nav-links nav-menu">
                     <a href="#hackathon">Hackathon</a>
                     <!--<a href="#schedule">Schedule</a>-->
                     <a href="#contribute">Submit for Talk, Stalls, Workshops</a>
@@ -119,6 +132,9 @@
                             outlined 20 distinct problem statements. Build
                             scalable solutions and submit your work.
                         </p>
+                        <div style="margin-top: 20px;">
+                            <a href="instructions.html" class="btn-primary" style="text-decoration: none;">ஹேக்கத்தான் பதிவு வழிமுறைகள்</a>
+                        </div>
                     </div>
                     <a
                         href="https://github.com/tossconf/TossHack26-ProblemStatements/issues"
@@ -288,6 +304,8 @@
                             >Request Exhibition Space</a
                         >
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -300,20 +318,24 @@
                     <p class="venue-address">
                         <strong>St. Joseph's Institute of Technology</strong
                         ><br />
-                        Old Mamallapuram Road, Semmancheri, <br />
+                        Old Mahabalipuram Road, Semmancheri, <br />
                         Chennai, Tamil Nadu 600119
                     </p>
                 </div>
                 <div class="map-container">
                     <iframe
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=80.215%2C12.868%2C80.225%2C12.878&amp;layer=mapnik&amp;marker=12.869321%2C80.218408"
-                        style="border: 1px solid black"
+                        src="https://maps.google.com/maps?q=St.%20Joseph's%20Institute%20of%20Technology,%20Chennai&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
                     >
                     </iframe>
                     <br />
                     <small>
                         <a
-                            href="https://www.openstreetmap.org/?mlat=12.869321&amp;mlon=80.218408#map=17/12.869321/80.218408"
+                            href="https://www.google.com/maps/search/?api=1&amp;query=St.+Joseph's+Institute+of+Technology,+Chennai"
+                            target="_blank"
                             >View Larger Map</a
                         >
                     </small>
@@ -491,12 +513,13 @@
                     console.error(networkFault);
                     layoutTarget.innerHTML = `
                     <div style="grid-column: 1/-1; text-align:center; padding:48px 24px; border:1px solid rgba(239,68,68,0.2); background:rgba(239,68,68,0.02); border-radius:16px;">
-                        <p style="color:#f87171; font-family:monospace; font-size:14px; margin-bottom:8px;">Data synchronization with GitHub API failed or was rate-limited.</p>
-                        <a href="https://github.com/tossconf/TossHack26-ProblemStatements/issues" target="_blank" style="font-size:12px; color:white; text-decoration:underline; font-weight:bold;">Browse Problems Directly on GitHub</a>
+                        <p style="color:#ef4444; font-family:monospace; font-size:14px; margin-bottom:8px;">Data synchronization with GitHub API failed or was rate-limited.</p>
+                        <a href="https://github.com/tossconf/TossHack26-ProblemStatements/issues" target="_blank" style="font-size:12px; color:var(--primary-blue); text-decoration:underline; font-weight:bold;">Browse Problems Directly on GitHub</a>
                     </div>`;
                 }
             }
             fetchActiveIssues();
         </script>
+        <script src="script.js"></script>
     </body>
 </html>
