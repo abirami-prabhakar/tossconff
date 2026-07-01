@@ -118,179 +118,178 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.popup')?.classList.remove('show');
     }
   });
+
   // Talks Track Switcher
   const trackTabs = document.querySelectorAll('.track-tab');
-  const scheduleGrid = document.querySelector('.schedule-grid');
-  
-  if (trackTabs && scheduleGrid) {
+
+  if (trackTabs) {
     trackTabs.forEach(tab => {
       tab.addEventListener('click', function () {
         // Remove active class from all tabs
         trackTabs.forEach(t => t.classList.remove('active'));
         // Add active class to clicked tab
         this.classList.add('active');
-        
         const selectedTrack = this.getAttribute('data-track');
-        
-        // Update the grid view state class
-        scheduleGrid.setAttribute('data-active-track', selectedTrack);
+        // Update all schedule grids
+        document.querySelectorAll('.schedule-grid').forEach(grid => {
+          grid.setAttribute('data-active-track', selectedTrack);
+        });
       });
     });
   }
-});
 
 
 
-        const eventDetails = {
-            keynote1: {
-                image: "./images/schedule/scikit.png",
-                title: "Scikit-Image பயன்படுத்தி படிமச் செயலாக்கம் ",
-                speaker: "செந்தில்குமார்",
-                time: "9:00 AM - 10:00 AM",
-                location: "Main Auditorium",
-                
-                description: "இந்த இணைய உரையில், செந்தில்குமார் அவர்கள் Scikit-Image நூலகத்தின் மூலம் படிமங்களை எளிமையாகவும் திறமையாகவும் எவ்வாறு செயலாக்கலாம் என்பதைக் கற்பிப்பார். இது படிம வடிவமைப்பு, அம்ச சோதனை மற்றும் கணினிக் காட்சி பயில்வோருக்கான ஒரு சிறந்த வாய்ப்பாகும்."
-              
-              },
-           
-           
-                workshop1: {
-                image: "./images/schedule/inkscape.jpeg",
-                title: "Inkscape மூலம் வடிவமைப்புகளை உருவாக்குதல் :ஆரம்பநிலைக்கு எளிதான வழிகாட்டி",
-                speaker: "பரமேஷ்வர் அருணாசலம்",
-                time: "10:30 AM - 12:00 PM",
-                location: "Workshop Room A",
-                description: "இந்த பணிமனைச் செய்முறைத் தொடரில், Inkscape மென்பொருள் பயன்படுத்தி எளிய மற்றும் ஈர்க்கக்கூடிய வடிவமைப்புகளை உருவாக்குவது கற்றுக்கொள்ளலாம். இது ஆரம்பநிலையர்களுக்கான சிறந்த வடிவமைப்பு பயிற்சி ஆகும்."
-               },
+  const eventDetails = {
+    keynote1: {
+      image: "./images/schedule/scikit.png",
+      title: "Scikit-Image பயன்படுத்தி படிமச் செயலாக்கம் ",
+      speaker: "செந்தில்குமார்",
+      time: "9:00 AM - 10:00 AM",
+      location: "Main Auditorium",
+
+      description: "இந்த இணைய உரையில், செந்தில்குமார் அவர்கள் Scikit-Image நூலகத்தின் மூலம் படிமங்களை எளிமையாகவும் திறமையாகவும் எவ்வாறு செயலாக்கலாம் என்பதைக் கற்பிப்பார். இது படிம வடிவமைப்பு, அம்ச சோதனை மற்றும் கணினிக் காட்சி பயில்வோருக்கான ஒரு சிறந்த வாய்ப்பாகும்."
+
+    },
+
+
+    workshop1: {
+      image: "./images/schedule/inkscape.jpeg",
+      title: "Inkscape மூலம் வடிவமைப்புகளை உருவாக்குதல் :ஆரம்பநிலைக்கு எளிதான வழிகாட்டி",
+      speaker: "பரமேஷ்வர் அருணாசலம்",
+      time: "10:30 AM - 12:00 PM",
+      location: "Workshop Room A",
+      description: "இந்த பணிமனைச் செய்முறைத் தொடரில், Inkscape மென்பொருள் பயன்படுத்தி எளிய மற்றும் ஈர்க்கக்கூடிய வடிவமைப்புகளை உருவாக்குவது கற்றுக்கொள்ளலாம். இது ஆரம்பநிலையர்களுக்கான சிறந்த வடிவமைப்பு பயிற்சி ஆகும்."
+    },
 
 
 
-            panel1: {
-                image: "./images/schedule/ai_future.jpeg",
-                title: "செயற்கை நுண்ணறிவுக் காலத்தில் கட்டற்ற மென்பொருட்களின் பங்கும் பயனும்",
-                speaker: "மயூரன்",
-                time: "1:00 PM - 2:30 PM",
-                location: "Conference Hall B",
-                description: "இந்த கலந்துரையாடலில், செயற்கை நுண்ணறிவின் வளர்ச்சியுடன் கட்டற்ற மென்பொருட்கள் எவ்வாறு முக்கிய பங்கு வகிக்கின்றன என்பதையும், அவற்றின் நன்மைகள் என்ன என்பதையும் விவாதிக்கப்படும். "
-              },
-
-
-
-
-            networking1: {
-                image: "./images/schedule/golang.png",
-                title: "Golang பற்றிய அறிமுகம்",
-                speaker: "மோகன் ராமன்",
-                time: "3:30 PM - 4:30 PM",
-                location: "Networking Lounge",
-                description: "இந்த நிகழ்வில், Golang மென்பொருள் மொழியின் அடிப்படை அம்சங்களை மற்றும் அதன் செயல்திறனையும் பயனாளர்களுக்காக எளிமையாக அறிமுகப்படுத்தப்படும். செயல்திறனும் நம்பகத்தன்மையும் தேடும் டெவலப்பர்களுக்கான சிறந்த தொடக்கவழிகாட்டி."
-            
-              },
+    panel1: {
+      image: "./images/schedule/ai_future.jpeg",
+      title: "செயற்கை நுண்ணறிவுக் காலத்தில் கட்டற்ற மென்பொருட்களின் பங்கும் பயனும்",
+      speaker: "மயூரன்",
+      time: "1:00 PM - 2:30 PM",
+      location: "Conference Hall B",
+      description: "இந்த கலந்துரையாடலில், செயற்கை நுண்ணறிவின் வளர்ச்சியுடன் கட்டற்ற மென்பொருட்கள் எவ்வாறு முக்கிய பங்கு வகிக்கின்றன என்பதையும், அவற்றின் நன்மைகள் என்ன என்பதையும் விவாதிக்கப்படும். "
+    },
 
 
 
 
+    networking1: {
+      image: "./images/schedule/golang.png",
+      title: "Golang பற்றிய அறிமுகம்",
+      speaker: "மோகன் ராமன்",
+      time: "3:30 PM - 4:30 PM",
+      location: "Networking Lounge",
+      description: "இந்த நிகழ்வில், Golang மென்பொருள் மொழியின் அடிப்படை அம்சங்களை மற்றும் அதன் செயல்திறனையும் பயனாளர்களுக்காக எளிமையாக அறிமுகப்படுத்தப்படும். செயல்திறனும் நம்பகத்தன்மையும் தேடும் டெவலப்பர்களுக்கான சிறந்த தொடக்கவழிகாட்டி."
 
-
-            closing1: {
-              image: "./images/schedule/games.jpeg",
-                title: "லினக்ஸ் Games: ஒரு அறிமுகம உரை",
-                speaker: "கலைஅரசன்",
-                time: "5:00 PM - 5:30 PM",
-                location: "Main Auditorium",
-                description: "இந்த உரையில், லினக்ஸ் தளத்தில் விளையாட்டுகளை இயக்குவதற்கான விருப்பங்கள், சாதனைகள் மற்றும் அண்மைய முன்னேற்றங்கள் பற்றிய எளிய mutta சுவாரசியமான பார்வை வழங்கப்படும்."
-           
-              },
-
-
-
-
-            keynote2: {
-              image: "./images/schedule/ai_linux.jpeg",
-                title: "செயற்கை நுண்ணறிவு பற்றிய சுருக்கமான அறிமுகம்",
-                speaker: "ராஜவசந்தன்",
-                time: "9:00 AM - 10:00 AM",
-                location: "Main Auditorium",
-                description: "இந்த தொடக்க உரையில், செயற்கை நுண்ணறிவு என்ன, அது எவ்வாறு செயல்படுகிறது மற்றும் அதன் பயன்பாடுகள் எதென்று எளிமையாக அறிமுகப்படுத்தப்படும். தொழில்நுட்ப உலகை புரிந்துகொள்ள விரும்புபவர்களுக்கு ஒரு சிறந்த ஆரம்பம்."
-           
-              },
+    },
 
 
 
 
-            demo1: {
-              image: "./images/schedule/docker.png",
-                title: "Docker: புதியவர்களுக்கான எளிய அறிமுகம் மற்றும் பயன்பாட்டு விளக்கம்",
-                speaker: "சாகில்",
-                time: "10:30 AM - 12:00 PM",
-                location: "Innovation Showcase Area",
-                description: "இந்த அமர்வில், தொகுப்பு மற்றும் கொண்டெய்னர் மாடலில் பயன்படும் Docker குறித்த அடிப்படைக் கருத்துகள் மற்றும் நடைமுறை பயன்பாடுகள் தெளிவாக விளக்கப்படும். புதியவர்களுக்கு இது ஒரு நடைமுறை வழிகாட்டியாக அமையும்."
-        
-              },
+
+
+    closing1: {
+      image: "./images/schedule/games.jpeg",
+      title: "லினக்ஸ் Games: ஒரு அறிமுகம உரை",
+      speaker: "கலைஅரசன்",
+      time: "5:00 PM - 5:30 PM",
+      location: "Main Auditorium",
+      description: "இந்த உரையில், லினக்ஸ் தளத்தில் விளையாட்டுகளை இயக்குவதற்கான விருப்பங்கள், சாதனைகள் மற்றும் அண்மைய முன்னேற்றங்கள் பற்றிய எளிய mutta சுவாரசியமான பார்வை வழங்கப்படும்."
+
+    },
 
 
 
-            workshop2: {
-              image: "./images/schedule/fastapi.png",
-                title: "FastAPI - ஒரு அறிமுகம உரை்",
-                speaker: "அதிபன்",
-                time: "1:00 PM - 2:30 PM",
-                location: "Workshop Room A",
-                description: "இந்த அமர்வில், மேற்படிநிலை வலை சேவைகளை விரைவாக உருவாக்க உதவும் FastAPI பற்றிய அடிப்படை விளக்கங்களும், அதன் செயல்திறன் மற்றும் எளிதான நடைமுறைகளும் அறிமுகப்படுத்தப்படும். Python டெவலப்பர்களுக்கான ஒரு விரைவான தொடக்கவழிகாட்டி."
-           
-              },
+
+    keynote2: {
+      image: "./images/schedule/ai_linux.jpeg",
+      title: "செயற்கை நுண்ணறிவு பற்றிய சுருக்கமான அறிமுகம்",
+      speaker: "ராஜவசந்தன்",
+      time: "9:00 AM - 10:00 AM",
+      location: "Main Auditorium",
+      description: "இந்த தொடக்க உரையில், செயற்கை நுண்ணறிவு என்ன, அது எவ்வாறு செயல்படுகிறது மற்றும் அதன் பயன்பாடுகள் எதென்று எளிமையாக அறிமுகப்படுத்தப்படும். தொழில்நுட்ப உலகை புரிந்துகொள்ள விரும்புபவர்களுக்கு ஒரு சிறந்த ஆரம்பம்."
+
+    },
 
 
 
-            awards: {
-              image: "./images/schedule/ml_scikit.jpeg",
-                title: "Scikit Learn மூலம் கற்கும் கருவிகள் உருவாக்கம் - ஒரு அறிமுகம உரை",
-                speaker: "பிரவீன் ஆர்",
-                time: "3:30 PM - 4:30 PM",
-                location: "Main Auditorium",
-                description: "இந்த உரையில், இயந்திர கற்றலை (Machine Learning) Scikit Learn நூலகம் மூலம் எளிமையாக புரிந்து கொண்டு, கற்றல் மாடல்கள் உருவாக்கும் முறை பற்றிய அறிமுகம் வழங்கப்படும். ஆரம்ப நிலை ஆர்வலர்களுக்கு ஏற்ற தொடக்கமாக அமையும்."
-          
-          
-              },
+
+    demo1: {
+      image: "./images/schedule/docker.png",
+      title: "Docker: புதியவர்களுக்கான எளிய அறிமுகம் மற்றும் பயன்பாட்டு விளக்கம்",
+      speaker: "சாகில்",
+      time: "10:30 AM - 12:00 PM",
+      location: "Innovation Showcase Area",
+      description: "இந்த அமர்வில், தொகுப்பு மற்றும் கொண்டெய்னர் மாடலில் பயன்படும் Docker குறித்த அடிப்படைக் கருத்துகள் மற்றும் நடைமுறை பயன்பாடுகள் தெளிவாக விளக்கப்படும். புதியவர்களுக்கு இது ஒரு நடைமுறை வழிகாட்டியாக அமையும்."
+
+    },
 
 
 
-            closing2: {
-              image: "./images/schedule/lambda.png",
-                title: "லேம்டா (lambda functions) - ஓர் அறிமுகம்",
-                speaker: "பிரித்திவிராஜ்",
-                time: "5:00 PM - 6:00 PM",
-                location: "Main Auditorium",
-                description: "இந்த உரையில், Python இல் உள்ள லேம்டா செயல்பாடுகள் பற்றிய அடிப்படைகளை, அவை எப்போது மற்றும் எவ்வாறு பயன்படுத்தப்படுகின்றன என்பதை எளிதாக விளக்கும் தொடக்கவழிகாட்டி வழங்கப்படும். குறும்பணிகளை எழுத ஆர்வமுள்ளவர்களுக்கு இது பயனளிக்கும்."
-           
-              }
+    workshop2: {
+      image: "./images/schedule/fastapi.png",
+      title: "FastAPI - ஒரு அறிமுகம உரை்",
+      speaker: "அதிபன்",
+      time: "1:00 PM - 2:30 PM",
+      location: "Workshop Room A",
+      description: "இந்த அமர்வில், மேற்படிநிலை வலை சேவைகளை விரைவாக உருவாக்க உதவும் FastAPI பற்றிய அடிப்படை விளக்கங்களும், அதன் செயல்திறன் மற்றும் எளிதான நடைமுறைகளும் அறிமுகப்படுத்தப்படும். Python டெவலப்பர்களுக்கான ஒரு விரைவான தொடக்கவழிகாட்டி."
+
+    },
 
 
 
-        };
+    awards: {
+      image: "./images/schedule/ml_scikit.jpeg",
+      title: "Scikit Learn மூலம் கற்கும் கருவிகள் உருவாக்கம் - ஒரு அறிமுகம உரை",
+      speaker: "பிரவீன் ஆர்",
+      time: "3:30 PM - 4:30 PM",
+      location: "Main Auditorium",
+      description: "இந்த உரையில், இயந்திர கற்றலை (Machine Learning) Scikit Learn நூலகம் மூலம் எளிமையாக புரிந்து கொண்டு, கற்றல் மாடல்கள் உருவாக்கும் முறை பற்றிய அறிமுகம் வழங்கப்படும். ஆரம்ப நிலை ஆர்வலர்களுக்கு ஏற்ற தொடக்கமாக அமையும்."
 
-        function switchDay(dayId, button) {
-            // Hide all day contents
-            document.querySelectorAll('.schedule-content').forEach(content => {
-                content.style.display = 'none';
-            });
 
-            // Show selected day
-            document.getElementById(dayId).style.display = 'block';
+    },
 
-            // Update active tab
-            document.querySelectorAll('.day-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            button.classList.add('active');
-        }
 
-        function openModal(eventId) {
-            const event = eventDetails[eventId];
-            if (!event) return;
 
-            const modalContent = document.getElementById('modalContent');
-            modalContent.innerHTML = `
+    closing2: {
+      image: "./images/schedule/lambda.png",
+      title: "லேம்டா (lambda functions) - ஓர் அறிமுகம்",
+      speaker: "பிரித்திவிராஜ்",
+      time: "5:00 PM - 6:00 PM",
+      location: "Main Auditorium",
+      description: "இந்த உரையில், Python இல் உள்ள லேம்டா செயல்பாடுகள் பற்றிய அடிப்படைகளை, அவை எப்போது மற்றும் எவ்வாறு பயன்படுத்தப்படுகின்றன என்பதை எளிதாக விளக்கும் தொடக்கவழிகாட்டி வழங்கப்படும். குறும்பணிகளை எழுத ஆர்வமுள்ளவர்களுக்கு இது பயனளிக்கும்."
+
+    }
+
+
+
+  };
+
+  function switchDay(dayId, button) {
+    // Hide all day contents
+    document.querySelectorAll('.schedule-content').forEach(content => {
+      content.style.display = 'none';
+    });
+
+    // Show selected day
+    document.getElementById(dayId).style.display = 'block';
+
+    // Update active tab
+    document.querySelectorAll('.day-tab').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    button.classList.add('active');
+  }
+
+  function openModal(eventId) {
+    const event = eventDetails[eventId];
+    if (!event) return;
+
+    const modalContent = document.getElementById('modalContent');
+    modalContent.innerHTML = `
                 <div class="speaker-photo">
                     <img src= ${event.image} alt="Description of image">
               
@@ -309,183 +308,185 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             `;
 
-            document.getElementById('modalOverlay').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+    document.getElementById('modalOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
-        function closeModal(event) {
-            if (event && event.target !== event.currentTarget) return;
-            
-            document.getElementById('modalOverlay').classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+  function closeModal(event) {
+    if (event && event.target !== event.currentTarget) return;
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
+    document.getElementById('modalOverlay').classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
 
-// Talk Description Mapping Database
-const talkDescriptions = {
+  // Close modal with Escape key
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
+
+  // Talk Description Mapping Database
+  const talkDescriptions = {
     "talk-rag": {
-        title: "Chatbot development using RAG & Vector Database",
-        speaker: "Anand Sundaramoorthy",
-        time: "09:30 AM - 10:15 AM",
-        track: "Track 1 (Hall A)",
-        trackClass: "track-1",
-        description: "This session introduces AI chatbot development using Retrieval-Augmented Generation (RAG) and Vector Databases. It covers how data is converted into embeddings, stored in vector databases like Upstash, and retrieved through LLMs to generate context-aware responses. The talk also explains why RAG is often preferred over fine-tuning due to its scalability, lower cost, and easier knowledge updates. This is an introductory session focused on understanding the workflow and real-world possibilities of modern AI chatbots."
+      title: "Chatbot development using RAG & Vector Database",
+      speaker: "Anand Sundaramoorthy",
+      time: "09:30 AM - 10:15 AM",
+      track: "Track 1 (Hall A)",
+      trackClass: "track-1",
+      description: "This session introduces AI chatbot development using Retrieval-Augmented Generation (RAG) and Vector Databases. It covers how data is converted into embeddings, stored in vector databases like Upstash, and retrieved through LLMs to generate context-aware responses. The talk also explains why RAG is often preferred over fine-tuning due to its scalability, lower cost, and easier knowledge updates. This is an introductory session focused on understanding the workflow and real-world possibilities of modern AI chatbots."
     },
     "talk-open-data": {
-        title: "From Raw Maps to Real Impact: Building with Open Data in India",
-        speaker: "Keerthana M G",
-        time: "09:30 AM - 10:15 AM",
-        track: "Track 2 (Hall B)",
-        trackClass: "track-2",
-        description: "Open data is often seen as a silver bullet for solving real-world problems. In reality, working with open datasets in India is far from straightforward. In this talk, I’ll share my experience building solar and civic-tech applications using open data sources such as OpenStreetMap, weather datasets, and geospatial APIs and the unexpected challenges that come with them. Rather than presenting an idealised view, this talk focuses on the messy reality of open data and how developers can still build meaningful, impactful solutions despite it."
+      title: "From Raw Maps to Real Impact: Building with Open Data in India",
+      speaker: "Keerthana M G",
+      time: "09:30 AM - 10:15 AM",
+      track: "Track 2 (Hall B)",
+      trackClass: "track-2",
+      description: "Open data is often seen as a silver bullet for solving real-world problems. In reality, working with open datasets in India is far from straightforward. In this talk, I’ll share my experience building solar and civic-tech applications using open data sources such as OpenStreetMap, weather datasets, and geospatial APIs and the unexpected challenges that come with them. Rather than presenting an idealised view, this talk focuses on the messy reality of open data and how developers can still build meaningful, impactful solutions despite it."
     },
     "talk-injee": {
-        title: "Rapid front end web development with Injee",
-        speaker: "Karthikeyan A K",
-        time: "10:15 AM - 11:00 AM",
-        track: "Track 1 (Hall A)",
-        trackClass: "track-1",
-        description: "I will be giving a small demo, and demonstrate, how Injee automatically creates a backend for you, as you develop front end. To keep things simple, I will use HTMX, rather than ReactJS."
+      title: "Rapid front end web development with Injee",
+      speaker: "Karthikeyan A K",
+      time: "10:15 AM - 11:00 AM",
+      track: "Track 1 (Hall A)",
+      trackClass: "track-1",
+      description: "I will be giving a small demo, and demonstrate, how Injee automatically creates a backend for you, as you develop front end. To keep things simple, I will use HTMX, rather than ReactJS."
     },
     "talk-valkey": {
-        title: "From Bottlenecks to Performance: Scaling with Valkey",
-        speaker: "Jeevitha G / Opensearch / CNCF",
-        time: "10:15 AM - 11:00 AM",
-        track: "Track 2 (Hall B)",
-        trackClass: "track-2",
-        description: "As modern applications scale, challenges like latency, repeated computation, and database bottlenecks become increasingly common. This session explores how Valkey helps improve performance using efficient caching, session management, rate limiting, and real-time data handling. Through practical demonstrations, attendees will learn scalable design patterns for building fast and resilient distributed systems using open source technologies."
+      title: "From Bottlenecks to Performance: Scaling with Valkey",
+      speaker: "Jeevitha G / Opensearch / CNCF",
+      time: "10:15 AM - 11:00 AM",
+      track: "Track 2 (Hall B)",
+      trackClass: "track-2",
+      description: "As modern applications scale, challenges like latency, repeated computation, and database bottlenecks become increasingly common. This session explores how Valkey helps improve performance using efficient caching, session management, rate limiting, and real-time data handling. Through practical demonstrations, attendees will learn scalable design patterns for building fast and resilient distributed systems using open source technologies."
     },
     "talk-k8s": {
-        title: "A Guide to Kubernetes Infrastructure Spend Management",
-        speaker: "Vignesh Saravanan",
-        time: "11:30 AM - 12:15 PM",
-        track: "Track 1 (Hall A)",
-        trackClass: "track-1",
-        description: "This session covers how open-source cost monitoring provides real-time visibility into Kubernetes workloads to prevent overspending. You will discover why cloud cost tracking is vital for FinOps and get a step-by-step guide to setting it up in your cluster."
+      title: "A Guide to Kubernetes Infrastructure Spend Management",
+      speaker: "Vignesh Saravanan",
+      time: "11:30 AM - 12:15 PM",
+      track: "Track 1 (Hall A)",
+      trackClass: "track-1",
+      description: "This session covers how open-source cost monitoring provides real-time visibility into Kubernetes workloads to prevent overspending. You will discover why cloud cost tracking is vital for FinOps and get a step-by-step guide to setting it up in your cluster."
     },
     "talk-freebsd": {
-        title: "Beyond Linux: The Power of FreeBSD",
-        speaker: "Shane Cardoz Maria",
-        time: "11:30 AM - 12:15 PM",
-        track: "Track 2 (Hall B)",
-        trackClass: "track-2",
-        description: "Most developers know Linux, but FreeBSD offers a different approach to operating system design. This talk explores what makes FreeBSD unique, how it powers critical infrastructure, and why understanding it can broaden your perspective on systems engineering."
+      title: "Beyond Linux: The Power of FreeBSD",
+      speaker: "Shane Cardoz Maria",
+      time: "11:30 AM - 12:15 PM",
+      track: "Track 2 (Hall B)",
+      trackClass: "track-2",
+      description: "Most developers know Linux, but FreeBSD offers a different approach to operating system design. This talk explores what makes FreeBSD unique, how it powers critical infrastructure, and why understanding it can broaden your perspective on systems engineering."
     },
     "talk-kafka": {
-        title: "Building Event-Driven Systems with Kafka",
-        speaker: "Yagapriyan Ganesh",
-        time: "12:15 PM - 01:00 PM",
-        track: "Track 1 (Hall A)",
-        trackClass: "track-1",
-        description: "Discover how Apache Kafka enables scalable, real-time communication between distributed applications using Event-Driven Architecture. This session covers Kafka fundamentals, key architectural concepts, and a live demonstration showcasing how event-driven systems work in practice."
+      title: "Building Event-Driven Systems with Kafka",
+      speaker: "Yagapriyan Ganesh",
+      time: "12:15 PM - 01:00 PM",
+      track: "Track 1 (Hall A)",
+      trackClass: "track-1",
+      description: "Discover how Apache Kafka enables scalable, real-time communication between distributed applications using Event-Driven Architecture. This session covers Kafka fundamentals, key architectural concepts, and a live demonstration showcasing how event-driven systems work in practice."
     },
     "talk-prav": {
-        title: "Prav: Creating a Community-Run Messaging Service",
-        speaker: "S. Badri",
-        time: "12:15 PM - 01:00 PM",
-        track: "Track 2 (Hall B)",
-        trackClass: "track-2",
-        description: "Many people run Free Software on their computers but use online webapps and services which are proprietary. With more things moving online, it is important to use Free Software for online solutions as well. In this talk, I will share about our journey setting up Prav as a community-run messaging platform, where users (rather than only CEOs or developers) get to decide where the project goes. I will also talk about our community-driven volunteer and funding model."
+      title: "Prav: Creating a Community-Run Messaging Service",
+      speaker: "S. Badri",
+      time: "12:15 PM - 01:00 PM",
+      track: "Track 2 (Hall B)",
+      trackClass: "track-2",
+      description: "Many people run Free Software on their computers but use online webapps and services which are proprietary. With more things moving online, it is important to use Free Software for online solutions as well. In this talk, I will share about our journey setting up Prav as a community-run messaging platform, where users (rather than only CEOs or developers) get to decide where the project goes. I will also talk about our community-driven volunteer and funding model."
     },
     "talk-ai-sec": {
-        title: "Using AI Models OSS way with security in mind",
-        speaker: "Ganesh Tiwari",
-        time: "02:00 PM - 02:45 PM",
-        track: "Track 1 (Hall A)",
-        trackClass: "track-1",
-        description: "AI models are the new to do thing and we should all try to utilise them as much as we can. In this chat, I am going to showcase the best and safest mechanism for running AI models in a sandboxed environment on your local machine using only OSS software. We are going to: Setup a VM using LimaCTL, Install OpenCode and startup a LLM on it."
+      title: "Using AI Models OSS way with security in mind",
+      speaker: "Ganesh Tiwari",
+      time: "02:00 PM - 02:45 PM",
+      track: "Track 1 (Hall A)",
+      trackClass: "track-1",
+      description: "AI models are the new to do thing and we should all try to utilise them as much as we can. In this chat, I am going to showcase the best and safest mechanism for running AI models in a sandboxed environment on your local machine using only OSS software. We are going to: Setup a VM using LimaCTL, Install OpenCode and startup a LLM on it."
     },
     "talk-containers": {
-        title: "Replacing my Linux Desktop with Containers to play games",
-        speaker: "Prasanth Baskar",
-        time: "02:00 PM - 02:45 PM",
-        track: "Track 2 (Hall B)",
-        trackClass: "track-2",
-        description: "I will show a demo using bootable containers, how my entire Linux desktop from the kernel to desktop applications, configs/dotfiles can be packaged, versioned, distributed, and updated/rollbacks as OCI artifacts using cloud-native workflows. This session we will find an answer for: What if setting up your laptop was as simple as pulling a container."
+      title: "Replacing my Linux Desktop with Containers to play games",
+      speaker: "Prasanth Baskar",
+      time: "02:00 PM - 02:45 PM",
+      track: "Track 2 (Hall B)",
+      trackClass: "track-2",
+      description: "I will show a demo using bootable containers, how my entire Linux desktop from the kernel to desktop applications, configs/dotfiles can be packaged, versioned, distributed, and updated/rollbacks as OCI artifacts using cloud-native workflows. This session we will find an answer for: What if setting up your laptop was as simple as pulling a container."
     },
     "talk-litert": {
-        title: "The Last Mile of AI: Open Source On-Device Inference with LiteRT and the Edge Cloud Continuum",
-        speaker: "Aakash Dhakshnamoorthy",
-        time: "02:45 PM - 03:30 PM",
-        track: "Track 1 (Hall A)",
-        trackClass: "track-1",
-        description: "Cloud native architectures solved distributed computing. Now frontier is the last mile: the device itself. LiteRT (formerly TensorFlow Lite, open sourced under Apache 2.0) is Google’s production-grade runtime powering on-device AI across 2.7 billion devices. In this talk, we’ll explore how LiteRT bridges the edge–cloud continuum: how models trained in the cloud (PyTorch, TensorFlow, JAX) are converted, quantized, and deployed to Android, iOS, web, and IoT with NPU acceleration no cloud call at every inference. We’ll cover the open source stack (LiteRT + LiteRT-LM + Gemma 4), real-world production patterns, and how cloud native teams can build privacy-first, offline-capable AI pipelines for the edge."
+      title: "The Last Mile of AI: Open Source On-Device Inference with LiteRT and the Edge Cloud Continuum",
+      speaker: "Aakash Dhakshnamoorthy",
+      time: "02:45 PM - 03:30 PM",
+      track: "Track 1 (Hall A)",
+      trackClass: "track-1",
+      description: "Cloud native architectures solved distributed computing. Now frontier is the last mile: the device itself. LiteRT (formerly TensorFlow Lite, open sourced under Apache 2.0) is Google’s production-grade runtime powering on-device AI across 2.7 billion devices. In this talk, we’ll explore how LiteRT bridges the edge–cloud continuum: how models trained in the cloud (PyTorch, TensorFlow, JAX) are converted, quantized, and deployed to Android, iOS, web, and IoT with NPU acceleration no cloud call at every inference. We’ll cover the open source stack (LiteRT + LiteRT-LM + Gemma 4), real-world production patterns, and how cloud native teams can build privacy-first, offline-capable AI pipelines for the edge."
     },
     "talk-sql": {
-        title: "SQL Components: Compile-Time Persistence for Modern Java Applications",
-        speaker: "Hari Nikesh",
-        time: "02:45 PM - 03:30 PM",
-        track: "Track 2 (Hall B)",
-        trackClass: "track-2",
-        description: "Most Java developers rely on ORMs or SQL builders that introduce runtime complexity, boilerplate code, and hidden performance costs. This session explores SQL Components, a modern compile-time persistence framework that generates type-safe JDBC abstractions, embraces pure SQL, and enables developers to build high-performance Java applications with less code and greater control over database interactions. Live demonstrations will showcase code generation, type safety, and real-world database operations."
+      title: "SQL Components: Compile-Time Persistence for Modern Java Applications",
+      speaker: "Hari Nikesh",
+      time: "02:45 PM - 03:30 PM",
+      track: "Track 2 (Hall B)",
+      trackClass: "track-2",
+      description: "Most Java developers rely on ORMs or SQL builders that introduce runtime complexity, boilerplate code, and hidden performance costs. This session explores SQL Components, a modern compile-time persistence framework that generates type-safe JDBC abstractions, embraces pure SQL, and enables developers to build high-performance Java applications with less code and greater control over database interactions. Live demonstrations will showcase code generation, type safety, and real-world database operations."
     }
-};
+  };
 
-// Interactive Talk Modal Logic
-document.addEventListener('DOMContentLoaded', function () {
+  // Interactive Talk Modal Logic
+  document.addEventListener('DOMContentLoaded', function () {
     const talkCards = document.querySelectorAll('.talk-card');
     const talkModal = document.getElementById('talk-modal');
     const talkModalClose = document.querySelector('.talk-modal-close');
-    
+
     if (talkCards && talkModal && talkModalClose) {
-        const modalTrack = document.getElementById('talk-modal-track');
-        const modalTitle = document.getElementById('talk-modal-title');
-        const modalTime = document.getElementById('talk-modal-time');
-        const modalSpeaker = document.getElementById('talk-modal-speaker');
-        const modalDesc = document.getElementById('talk-modal-desc');
+      const modalTrack = document.getElementById('talk-modal-track');
+      const modalTitle = document.getElementById('talk-modal-title');
+      const modalTime = document.getElementById('talk-modal-time');
+      const modalSpeaker = document.getElementById('talk-modal-speaker');
+      const modalDesc = document.getElementById('talk-modal-desc');
 
-        talkCards.forEach(card => {
-            card.addEventListener('click', function () {
-                const talkId = this.getAttribute('data-talk-id');
-                const talk = talkDescriptions[talkId];
-                if (!talk) return;
+      talkCards.forEach(card => {
+        card.addEventListener('click', function () {
+          const talkId = this.getAttribute('data-talk-id');
+          const talk = talkDescriptions[talkId];
+          if (!talk) return;
 
-                // Populate modal data
-                modalTitle.textContent = talk.title;
-                modalSpeaker.innerHTML = `👤 ${talk.speaker}`;
-                modalTime.innerHTML = `🕒 ${talk.time}`;
-                modalDesc.textContent = talk.description;
-                
-                // Track badge classes & text
-                modalTrack.textContent = talk.track;
-                modalTrack.className = 'talk-modal-track-badge'; // reset
-                modalTrack.classList.add(talk.trackClass);
+          // Populate modal data
+          modalTitle.textContent = talk.title;
+          modalSpeaker.innerHTML = `👤 ${talk.speaker}`;
+          modalTime.innerHTML = `🕒 ${talk.time}`;
+          modalDesc.textContent = talk.description;
 
-                // Show modal
-                talkModal.classList.add('active');
-                talkModal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            });
+          // Track badge classes & text
+          modalTrack.textContent = talk.track;
+          modalTrack.className = 'talk-modal-track-badge'; // reset
+          modalTrack.classList.add(talk.trackClass);
+
+          // Show modal
+          talkModal.classList.add('active');
+          talkModal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
         });
+      });
 
-        // Close modal function
-        const closeTalkModal = function () {
-            talkModal.classList.remove('active');
-            talkModal.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        };
+      // Close modal function
+      const closeTalkModal = function () {
+        talkModal.classList.remove('active');
+        talkModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
 
-        // Close button click
-        talkModalClose.addEventListener('click', closeTalkModal);
+      // Close button click
+      talkModalClose.addEventListener('click', closeTalkModal);
 
-        // Click outside container to close
-        talkModal.addEventListener('click', function (e) {
-            if (e.target === talkModal) {
-                closeTalkModal();
-            }
-        });
+      // Click outside container to close
+      talkModal.addEventListener('click', function (e) {
+        if (e.target === talkModal) {
+          closeTalkModal();
+        }
+      });
 
-        // Close with Escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && talkModal.classList.contains('active')) {
-                closeTalkModal();
-            }
-        });
+      // Close with Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && talkModal.classList.contains('active')) {
+          closeTalkModal();
+        }
+      });
     }
+  });
+
 });
