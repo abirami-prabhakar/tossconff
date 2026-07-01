@@ -118,6 +118,25 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.popup')?.classList.remove('show');
     }
   });
+  // Talks Track Switcher
+  const trackTabs = document.querySelectorAll('.track-tab');
+  const scheduleGrid = document.querySelector('.schedule-grid');
+  
+  if (trackTabs && scheduleGrid) {
+    trackTabs.forEach(tab => {
+      tab.addEventListener('click', function () {
+        // Remove active class from all tabs
+        trackTabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        const selectedTrack = this.getAttribute('data-track');
+        
+        // Update the grid view state class
+        scheduleGrid.setAttribute('data-active-track', selectedTrack);
+      });
+    });
+  }
 });
 
 
