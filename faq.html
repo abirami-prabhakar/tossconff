@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ta" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | TOSSCONF 2026</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <style>
+        /* Add some markdown-specific basic styling since we don't have a markdown CSS framework loaded */
+        .markdown-body h3 { margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-blue); }
+        .markdown-body p { margin-bottom: 1rem; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <nav class="navbar glass">
+        <div class="container nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                    <img src="images/hero_bg1.png" alt="TOSSCONF Logo" class="logo-img" />
+                    <span class="logo-text">TOSSConf <span class="logo-year">26</span></span>
+                </a>
+            </div>
+            <div class="nav-links nav-menu">
+                <a href="index.html" style="display: inline-flex; align-items: center; gap: 6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    HomePage
+                </a>
+                <a href="index.html#hackathon">Hackathon</a>
+                <a href="index.html#talks-schedule">Schedule</a>
+                <a href="index.html#workshops-schedule">Workshops</a>
+                <a href="faq.html" style="display: inline-flex; align-items: center; gap: 6px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    FAQ
+                </a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding bg-alt" style="margin-top: 80px; min-height: 70vh;">
+        <div class="container faq-center">
+            <div class="text-center" style="margin-bottom: 48px;">
+                <div class="section-tagline">// FREQUENTLY ASKED QUESTIONS</div>
+                <h2 class="section-title tamil-font">கேள்வி பதில்கள்</h2>
+            </div>
+            <div id="faq-content" class="markdown-body" style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                <p style="text-align: center;">Loading FAQ...</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-title tamil-font">கணியம் அறக்கட்டளை மற்றும் தமிழ் லினக்ஸ் சமூகம்</p>
+            <p class="footer-copy">© 2026 TOSSCONF. Maintained openly on GitHub. Distributed under copyleft constraints.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Load the FAQ markdown immediately
+        async function loadFAQ() {
+            const container = document.getElementById('faq-content');
+            try {
+                // Add a cache buster to prevent caching issues in development
+                const response = await fetch('FAQ.md?t=' + new Date().getTime());
+                if (!response.ok) throw new Error('Network response was not ok');
+                const text = await response.text();
+                container.innerHTML = marked.parse(text);
+            } catch (err) {
+                console.error(err);
+                container.innerHTML = '<p style="color: red; text-align: center;">Error loading FAQ. Please check if FAQ.md exists.</p>';
+            }
+        }
+        loadFAQ();
+    </script>
+</body>
+</html>
