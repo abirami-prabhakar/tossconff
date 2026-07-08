@@ -164,10 +164,7 @@
                         outlined 20 distinct problem statements. Build
                         scalable solutions and submit your work.
                     </p>
-                    <div style="margin-top: 20px">
-                        <a href="instructions.html" class="btn-primary" style="text-decoration: none">ஹேக்கத்தான் பதிவு
-                            வழிமுறைகள்</a>
-                    </div>
+
                 </div>
                 <a href="https://github.com/tossconf/TossHack26-ProblemStatements/issues" target="_blank"
                     class="btn-github glass">
@@ -179,11 +176,7 @@
                 </a>
             </div>
 
-            <div id="github-issues" class="grid-3">
-                <div class="shimmer-box shimmer-pulse"></div>
-                <div class="shimmer-box shimmer-pulse"></div>
-                <div class="shimmer-box shimmer-pulse"></div>
-            </div>
+            <h2>TOSS Hack Registrations are closed</h2>
         </div>
     </section>
 
@@ -647,66 +640,8 @@
         setInterval(runCountdownEngine, 1000);
         runCountdownEngine();
 
-        // REST API Asynchronous Repository Pipeline
-        async function fetchActiveIssues() {
-            const layoutTarget = document.getElementById("github-issues");
-            try {
-                const apiURI =
-                    "https://api.github.com/repos/tossconf/TossHack26-ProblemStatements/issues?state=open&per_page=18";
-                const resolutionPipeline = await fetch(apiURI);
-
-                if (!resolutionPipeline.ok)
-                    throw new Error("Data payload streaming failure");
-
-                const datasetArray = await resolutionPipeline.json();
-                layoutTarget.innerHTML = "";
-
-                if (datasetArray.length === 0) {
-                    layoutTarget.innerHTML = `<p style="color:#555; grid-column: 1/-1; text-align:center; font-family:monospace; font-size:14px; padding:24px 0;">No active problem issues found inside the workspace repository tracking system currently.</p>`;
-                    return;
-                }
-
-                datasetArray.forEach((issueData) => {
-                    const trackTabs = document.querySelectorAll('.track-tab');
-                    const blockNode = document.createElement("div");
-                    blockNode.className = "issue-card";
-
-                    const processedTitle = issueData.title
-                        .replace(/</g, "&lt;")
-                        .replace(/>/g, "&gt;");
-                    const processedBody = issueData.body
-                        ? issueData.body
-                            .replace(/</g, "&lt;")
-                            .replace(/>/g, "&gt;")
-                            .substring(0, 110) + "..."
-                        : "No architectural parameters structured inside this problem module description...";
-
-                    blockNode.innerHTML = `
-                        <div>
-                            <div class="issue-meta">
-                                <span class="issue-num">#ISSUE-${issueData.number}</span>
-                                <span class="issue-status"><span class="issue-pulse-dot"></span>OPEN SPEC</span>
-                            </div>
-                            <h4 class="issue-card-title font-sans">${processedTitle}</h4>
-                            <p class="issue-context">${processedBody}</p>
-                        </div>
-                        <div>
-                            <a href="${issueData.html_url}" target="_blank" class="issue-link">Inspect Parameters</a>
-                        </div>
-                    `;
-                    layoutTarget.appendChild(blockNode);
-                });
-            } catch (networkFault) {
-                console.error(networkFault);
-                layoutTarget.innerHTML = `
-                    <div style="grid-column: 1/-1; text-align:center; padding:48px 24px; border:1px solid rgba(239,68,68,0.2); background:rgba(239,68,68,0.02); border-radius:16px;">
-                        <p style="color:#ef4444; font-family:monospace; font-size:14px; margin-bottom:8px;">Data synchronization with GitHub API failed or was rate-limited.</p>
-                        <a href="https://github.com/tossconf/TossHack26-ProblemStatements/issues" target="_blank" style="font-size:12px; color:var(--primary-blue); text-decoration:underline; font-weight:bold;">Browse Problems Directly on GitHub</a>
-                    </div>`;
-            }
-        }
-        fetchActiveIssues();
     </script>
+
     <!-- Interactive Talk Details Modal -->
     <div id="talk-modal" class="talk-modal-overlay" aria-hidden="true">
         <div class="talk-modal-container glass">
