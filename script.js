@@ -328,6 +328,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Talk Description Mapping Database
   const talkDescriptions = {
+    "workshop-otel": {
+      title: "Getting Started with OpenTelemetry: Instrumenting an E‑commerce Application with SigNoz",
+      speaker: "Vwake7",
+      time: "10:00 AM - 12:00 PM",
+      track: "Track 1 - Workshop",
+      trackClass: "track-1",
+      description: "Learn how to instrument a real-world e-commerce application using OpenTelemetry (OTel) to gain deep observability into its performance. This hands-on workshop covers manual and automatic instrumentation, collecting metrics and traces, and visualizing them in SigNoz to debug bottlenecks in real time."
+    },
+    "workshop-ai-selfhost": {
+      title: " Contributing to Frappe Framework",
+      speaker: "Bowrna Prabhakaran",
+      time: "10:00 AM - 12:00 PM",
+      track: "Track 2 - Workshop",
+      trackClass: "track-2",
+      description: "Frappe Framework is a full-stack open-source web development framework to build business apps quickly. The primary aim of this workshop on the Frappe Framework is to help participants get started contributing to the project."
+    },
+    "workshop-craft": {
+      title: "The Art of Crafting Software",
+      speaker: "Tamizhvendan S",
+      time: "01:00 PM - 03:00 PM",
+      track: "Track 1 - Workshop",
+      trackClass: "track-1",
+      description: "A deep dive into software engineering best practices, writing clean and maintainable code, and adopting a craftsman's mindset. This session covers foundational software design principles, testing strategies, and refactoring patterns to help developers write code that stands the test of time."
+    },
+    "workshop-nix": {
+      title: "Adopting Nix from Day 1 through Nix Shells for Absolute Beginners",
+      speaker: "Vivekanandan KS",
+      time: "01:00 PM - 03:00 PM",
+      track: "Track 2 - Workshop",
+      trackClass: "track-2",
+      description: "An absolute beginner's guide to Nix and Nix Shells. Learn how Nix can solve the 'it works on my machine' problem by providing reproducible, isolated developer environments. This workshop will walk you through writing your first nix-shell configuration to manage project dependencies effortlessly."
+    },
     "talk-rag": {
       title: "Chatbot development using RAG & Vector Database",
       speaker: "Anand Sundaramoorthy",
@@ -427,7 +459,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   // Interactive Talk Modal Logic
-  document.addEventListener('DOMContentLoaded', function () {
+  (function () {
     const talkCards = document.querySelectorAll('.talk-card');
     const talkModal = document.getElementById('talk-modal');
     const talkModalClose = document.querySelector('.talk-modal-close');
@@ -487,6 +519,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
-  });
+  }());
 
 });
