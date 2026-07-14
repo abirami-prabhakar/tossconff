@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-rag": {
       title: "Chatbot development using RAG & Vector Database",
       speaker: "Anand Sundaramoorthy",
-      time: "09:30 AM - 10:15 AM",
+      time: "10:30 AM - 11:10 AM",
       track: "Track 1 (Hall A)",
       trackClass: "track-1",
       description: "This session introduces AI chatbot development using Retrieval-Augmented Generation (RAG) and Vector Databases. It covers how data is converted into embeddings, stored in vector databases like Upstash, and retrieved through LLMs to generate context-aware responses. The talk also explains why RAG is often preferred over fine-tuning due to its scalability, lower cost, and easier knowledge updates. This is an introductory session focused on understanding the workflow and real-world possibilities of modern AI chatbots."
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-open-data": {
       title: "From Raw Maps to Real Impact: Building with Open Data in India",
       speaker: "Keerthana M G",
-      time: "09:30 AM - 10:15 AM",
+      time: "10:30 AM - 11:10 AM",
       track: "Track 2 (Hall B)",
       trackClass: "track-2",
       description: "Open data is often seen as a silver bullet for solving real-world problems. In reality, working with open datasets in India is far from straightforward. In this talk, I’ll share my experience building solar and civic-tech applications using open data sources such as OpenStreetMap, weather datasets, and geospatial APIs and the unexpected challenges that come with them. Rather than presenting an idealised view, this talk focuses on the messy reality of open data and how developers can still build meaningful, impactful solutions despite it."
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-injee": {
       title: "Rapid front end web development with Injee",
       speaker: "Karthikeyan A K",
-      time: "10:15 AM - 11:00 AM",
+      time: "11:10 AM - 11:50 AM",
       track: "Track 1 (Hall A)",
       trackClass: "track-1",
       description: "I will be giving a small demo, and demonstrate, how Injee automatically creates a backend for you, as you develop front end. To keep things simple, I will use HTMX, rather than ReactJS."
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-valkey": {
       title: "From Bottlenecks to Performance: Scaling with Valkey",
       speaker: "Jeevitha G / Opensearch / CNCF",
-      time: "10:15 AM - 11:00 AM",
+      time: "11:10 AM - 11:50 AM",
       track: "Track 2 (Hall B)",
       trackClass: "track-2",
       description: "As modern applications scale, challenges like latency, repeated computation, and database bottlenecks become increasingly common. This session explores how Valkey helps improve performance using efficient caching, session management, rate limiting, and real-time data handling. Through practical demonstrations, attendees will learn scalable design patterns for building fast and resilient distributed systems using open source technologies."
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-k8s": {
       title: "A Guide to Kubernetes Infrastructure Spend Management",
       speaker: "Vignesh Saravanan",
-      time: "11:30 AM - 12:15 PM",
+      time: "11:50 AM - 12:30 PM",
       track: "Track 1 (Hall A)",
       trackClass: "track-1",
       description: "This session covers how open-source cost monitoring provides real-time visibility into Kubernetes workloads to prevent overspending. You will discover why cloud cost tracking is vital for FinOps and get a step-by-step guide to setting it up in your cluster."
@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-freebsd": {
       title: "Beyond Linux: The Power of FreeBSD",
       speaker: "Shane Cardoz Maria",
-      time: "11:30 AM - 12:15 PM",
+      time: "11:50 AM - 12:30 PM",
       track: "Track 2 (Hall B)",
       trackClass: "track-2",
       description: "Most developers know Linux, but FreeBSD offers a different approach to operating system design. This talk explores what makes FreeBSD unique, how it powers critical infrastructure, and why understanding it can broaden your perspective on systems engineering."
@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-kafka": {
       title: "Building Event-Driven Systems with Kafka",
       speaker: "Yagapriyan Ganesh",
-      time: "12:15 PM - 01:00 PM",
+      time: "1:30 PM - 2:10 PM",
       track: "Track 1 (Hall A)",
       trackClass: "track-1",
       description: "Discover how Apache Kafka enables scalable, real-time communication between distributed applications using Event-Driven Architecture. This session covers Kafka fundamentals, key architectural concepts, and a live demonstration showcasing how event-driven systems work in practice."
@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-prav": {
       title: "Prav: Creating a Community-Run Messaging Service",
       speaker: "S. Badri",
-      time: "12:15 PM - 01:00 PM",
+      time: "1:30 PM - 2:10 PM",
       track: "Track 2 (Hall B)",
       trackClass: "track-2",
       description: "Many people run Free Software on their computers but use online webapps and services which are proprietary. With more things moving online, it is important to use Free Software for online solutions as well. In this talk, I will share about our journey setting up Prav as a community-run messaging platform, where users (rather than only CEOs or developers) get to decide where the project goes. I will also talk about our community-driven volunteer and funding model."
@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-ai-sec": {
       title: "Using AI Models OSS way with security in mind",
       speaker: "Ganesh Tiwari",
-      time: "02:00 PM - 02:45 PM",
+      time: "2:10 PM - 2:50 PM",
       track: "Track 1 (Hall A)",
       trackClass: "track-1",
       description: "AI models are the new to do thing and we should all try to utilise them as much as we can. In this chat, I am going to showcase the best and safest mechanism for running AI models in a sandboxed environment on your local machine using only OSS software. We are going to: Setup a VM using LimaCTL, Install OpenCode and startup a LLM on it."
@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-containers": {
       title: "Replacing my Linux Desktop with Containers to play games",
       speaker: "Prasanth Baskar",
-      time: "02:00 PM - 02:45 PM",
+      time: "2:10 PM - 2:50 PM",
       track: "Track 2 (Hall B)",
       trackClass: "track-2",
       description: "I will show a demo using bootable containers, how my entire Linux desktop from the kernel to desktop applications, configs/dotfiles can be packaged, versioned, distributed, and updated/rollbacks as OCI artifacts using cloud-native workflows. This session we will find an answer for: What if setting up your laptop was as simple as pulling a container."
@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-litert": {
       title: "The Last Mile of AI: Open Source On-Device Inference with LiteRT and the Edge Cloud Continuum",
       speaker: "Aakash Dhakshnamoorthy",
-      time: "02:45 PM - 03:30 PM",
+      time: "2:50 PM - 3:30 PM",
       track: "Track 1 (Hall A)",
       trackClass: "track-1",
       description: "Cloud native architectures solved distributed computing. Now frontier is the last mile: the device itself. LiteRT (formerly TensorFlow Lite, open sourced under Apache 2.0) is Google’s production-grade runtime powering on-device AI across 2.7 billion devices. In this talk, we’ll explore how LiteRT bridges the edge–cloud continuum: how models trained in the cloud (PyTorch, TensorFlow, JAX) are converted, quantized, and deployed to Android, iOS, web, and IoT with NPU acceleration no cloud call at every inference. We’ll cover the open source stack (LiteRT + LiteRT-LM + Gemma 4), real-world production patterns, and how cloud native teams can build privacy-first, offline-capable AI pipelines for the edge."
@@ -451,10 +451,26 @@ document.addEventListener('DOMContentLoaded', function () {
     "talk-sql": {
       title: "SQL Components: Compile-Time Persistence for Modern Java Applications",
       speaker: "Hari Nikesh",
-      time: "02:45 PM - 03:30 PM",
+      time: "2:50 PM - 3:30 PM",
       track: "Track 2 (Hall B)",
       trackClass: "track-2",
       description: "Most Java developers rely on ORMs or SQL builders that introduce runtime complexity, boilerplate code, and hidden performance costs. This session explores SQL Components, a modern compile-time persistence framework that generates type-safe JDBC abstractions, embraces pure SQL, and enables developers to build high-performance Java applications with less code and greater control over database interactions. Live demonstrations will showcase code generation, type safety, and real-world database operations."
+    },
+    "talk-tokenizer": {
+      title: "Ghilli Tokenizer: The Hidden Tax on Every Tamil Word You Type to an AI",
+      speaker: "Manoj Mohan",
+      time: "3:30 PM - 4:10 PM",
+      track: "Track 1 (Hall A)",
+      trackClass: "track-1",
+      description: "There’s a hidden tax on every Tamil word you type to an AI — and most people don’t even know they’re paying it. It’s called tokenization, and it quietly makes Tamil eight times more expensive to process than English."
+    },
+    "talk-customandroid": {
+      title: "Installing a Custom Android OS: From Bootloader to First Boot",
+      speaker: "Prasanth",
+      time: "3:30 PM - 4:10 PM",
+      track: "Track 2 (Hall B)",
+      trackClass: "track-2",
+      description: "Many Android devices stop receiving software updates after just a few years, even though the hardware remains perfectly usable. This talk focuses on installing a Custom Android OS by covering Bootloader unlocking, Custom Recovery, and Custom ROMs, followed by a live demonstration of flashing a Custom ROM on a real Android device. Experience the benefits of newer Android versions, improved privacy, better performance, and extended device longevity."
     }
   };
 
