@@ -385,12 +385,12 @@ document.addEventListener('DOMContentLoaded', function () {
       description: "I will be giving a small demo, and demonstrate, how Injee automatically creates a backend for you, as you develop front end. To keep things simple, I will use HTMX, rather than ReactJS."
     },
     "talk-valkey": {
-      title: "From Bottlenecks to Performance: Scaling with Valkey",
-      speaker: "Jeevitha G / Opensearch / CNCF",
+      title: "Neer Vazhvu - Urban water intelligence for Indian cities",
+      speaker: "Sundaresh Prasanna Chandran",
       time: "11:10 AM - 11:50 AM",
       track: "Track 2 (Hall B)",
       trackClass: "track-2",
-      description: "As modern applications scale, challenges like latency, repeated computation, and database bottlenecks become increasingly common. This session explores how Valkey helps improve performance using efficient caching, session management, rate limiting, and real-time data handling. Through practical demonstrations, attendees will learn scalable design patterns for building fast and resilient distributed systems using open source technologies."
+      description: "An open-source platform that turns public water data into actionable intelligence for Indian cities. Live for Chennai, Madurai, and Bengaluru today, with more cities on the way. Tracks reservoir levels, groundwater health, river water quality, flood risk, sewerage infrastructure, and water body loss across Indian cities. Each city’s dashboard reflects what’s actually knowable for that city - so Chennai surfaces CMWSSB-fed days-of-water-left + 5-factor ward risk, Madurai surfaces a Vaigai allocation hero + 3-factor ward risk because its dams are irrigation-primary. Bengaluru surfaces a Cauvery-pumping hero (BWSSB lifts treated water 100 km from T.K. Halli, so reservoir storage is not the right runway metric), layered on the IISc 80-ward stress overlay, since all 6 Bangalore Urban CGWB blocks are overexploited."
     },
     "talk-k8s": {
       title: "A Guide to Kubernetes Infrastructure Spend Management",
