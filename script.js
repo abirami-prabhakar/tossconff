@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modalContent.innerHTML = `
                 <div class="speaker-photo">
                     <img src= ${event.image} alt="Description of image">
-              
+
                 </div>
                 <div class="event-details">
                     <h3>${event.title}</h3>
@@ -334,7 +334,8 @@ document.addEventListener('DOMContentLoaded', function () {
       time: "10:00 AM - 12:00 PM",
       track: "Track 1 - Workshop",
       trackClass: "track-1",
-      description: "Learn how to instrument a real-world e-commerce application using OpenTelemetry (OTel) to gain deep observability into its performance. This hands-on workshop covers manual and automatic instrumentation, collecting metrics and traces, and visualizing them in SigNoz to debug bottlenecks in real time."
+      description: "Learn how to instrument a real-world e-commerce application using OpenTelemetry (OTel) to gain deep observability into its performance. This hands-on workshop covers manual and automatic instrumentation, collecting metrics and traces, and visualizing them in SigNoz to debug bottlenecks in real time.",
+      link: "https://forums.tamillinuxcommunity.org/t/tossconf26-workshop/3315/7?u=syedjafer"
     },
     "workshop-ai-selfhost": {
       title: " Contributing to Frappe Framework",
@@ -350,7 +351,8 @@ document.addEventListener('DOMContentLoaded', function () {
       time: "01:00 PM - 03:00 PM",
       track: "Track 1 - Workshop",
       trackClass: "track-1",
-      description: "A deep dive into software engineering best practices, writing clean and maintainable code, and adopting a craftsman's mindset. This session covers foundational software design principles, testing strategies, and refactoring patterns to help developers write code that stands the test of time."
+      description: "A deep dive into software engineering best practices, writing clean and maintainable code, and adopting a craftsman's mindset. This session covers foundational software design principles, testing strategies, and refactoring patterns to help developers write code that stands the test of time.",
+      prerequesite: "A laptop with 16 GB RAM or more, Docker Desktop (or Docker Engine + Docker Compose), Git installed, and basic familiarity with Docker and the command line."
     },
     "workshop-nix": {
       title: "Adopting Nix from Day 1 through Nix Shells for Absolute Beginners",
@@ -358,7 +360,8 @@ document.addEventListener('DOMContentLoaded', function () {
       time: "01:00 PM - 03:00 PM",
       track: "Track 2 - Workshop",
       trackClass: "track-2",
-      description: "An absolute beginner's guide to Nix and Nix Shells. Learn how Nix can solve the 'it works on my machine' problem by providing reproducible, isolated developer environments. This workshop will walk you through writing your first nix-shell configuration to manage project dependencies effortlessly."
+      description: "An absolute beginner's guide to Nix and Nix Shells. Learn how Nix can solve the 'it works on my machine' problem by providing reproducible, isolated developer environments. This workshop will walk you through writing your first nix-shell configuration to manage project dependencies effortlessly. ",
+      prerequesite: "https://forums.tamillinuxcommunity.org/t/tossconf26-workshop/3315/5?u=syedjafer"
     },
     "talk-rag": {
       title: "Chatbot development using RAG & Vector Database",
@@ -486,6 +489,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const modalTime = document.getElementById('talk-modal-time');
       const modalSpeaker = document.getElementById('talk-modal-speaker');
       const modalDesc = document.getElementById('talk-modal-desc');
+      const modelPre = document.getElementById('talk-modal-pre');
+
 
       talkCards.forEach(card => {
         card.addEventListener('click', function () {
@@ -498,6 +503,7 @@ document.addEventListener('DOMContentLoaded', function () {
           modalSpeaker.innerHTML = `👤 ${talk.speaker}`;
           modalTime.innerHTML = `🕒 ${talk.time}`;
           modalDesc.textContent = talk.description;
+          modelPre.textContent = talk.prerequesite;
 
           // Track badge classes & text
           modalTrack.textContent = talk.track;
